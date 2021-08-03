@@ -1,0 +1,347 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <RootNamespace>RemoteControlRepetierServer</RootNamespace>
+    <AssemblyName>RemoteControlRepetierServer</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\NoInternet.svg" />
+    <None Remove="Resources\Images\DemoRenderImage.png" />
+    <None Remove="Resources\Images\demo_render_image.png" />
+    <None Remove="Resources\Images\Octoprint.png" />
+    <None Remove="Resources\Localization\Flags\de-DE.png" />
+    <None Remove="Resources\Localization\Flags\en-US.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\NoInternet.svg" />
+    <EmbeddedResource Include="Resources\Images\DemoRenderImage.png" />
+    <EmbeddedResource Include="Resources\Images\Octoprint.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.3.0" />
+    <PackageReference Include="LibVLCSharp.Forms" Version="3.4.8" />
+    <PackageReference Include="MvvmLight" Version="5.4.1.1" />
+    <PackageReference Include="Syncfusion.Licensing" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="18.3.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="18.3.0.40" />
+    <PackageReference Include="WebSocketSharp-netstandard" Version="1.0.1" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1534" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.41" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="3.0.0-beta5" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="3.0.0-beta5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\AndreasReitberger\Libs\RepetierServerSharpApi\trunk\Source\RepetierServerSharpApi\RepetierServerSharpApi\RepetierServerSharpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\demo_render_image.png" />
+    <Resource Include="Resources\Localization\Flags\de-DE.png" />
+    <Resource Include="Resources\Localization\Flags\en-US.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Localization\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\DefaultTheme.xaml.cs">
+      <DependentUpon>DefaultTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\GlobalTemplates.xaml.cs">
+      <DependentUpon>GlobalTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\DarkTheme.xaml.cs">
+      <DependentUpon>DarkTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\ErrorsPage.xaml.cs">
+      <DependentUpon>ErrorsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HistoryPage.xaml.cs">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ProjectsPage.xaml.cs">
+      <DependentUpon>ProjectsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PrintersPage.xaml.cs">
+      <DependentUpon>PrintersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\FindNetworkDevicePage.xaml.cs">
+      <DependentUpon>FindNetworkDevicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\PrintServerSelectServerPage.xaml.cs">
+      <DependentUpon>PrintServerSelectServerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\PrintServerWelcomePage.xaml.cs">
+      <DependentUpon>PrintServerWelcomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\PrintServerSelectPrinterPage.xaml.cs">
+      <DependentUpon>PrintServerSelectPrinterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\PrintServerNotConfiguredPage.xaml.cs">
+      <DependentUpon>PrintServerNotConfiguredPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\PrintServerOfflinePage.xaml.cs">
+      <DependentUpon>PrintServerOfflinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pages\PrintServerConnectionPage.xaml.cs">
+      <DependentUpon>PrintServerConnectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\SettingsPrintServerPage.xaml.cs">
+      <DependentUpon>SettingsPrintServerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\SettingsPrintServerNewServerPage.xaml.cs">
+      <DependentUpon>SettingsPrintServerNewServerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\SettingsPrintServerWebCamSetupPage.xaml.cs">
+      <DependentUpon>SettingsPrintServerWebCamSetupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\SettingsPrintServerLimitsPage.xaml.cs">
+      <DependentUpon>SettingsPrintServerLimitsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\SettingsPrintServerGcodeScripts.xaml.cs">
+      <DependentUpon>SettingsPrintServerGcodeScripts.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings\SettingsPrintServerConnectionPage.xaml.cs">
+      <DependentUpon>SettingsPrintServerConnectionPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AppShell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\Strings.de-DE.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Templates\CurrentPrintStateViewTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\BoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\CustomControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Entries.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Frame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\StackLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfAutoComplete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCharts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfComboBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCircularGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfGradientView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfMaskedEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfNumericTextInputs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfNumericUpDowns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfPullToRefresh.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfRotator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfTabView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfTextInputLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\SyncDarkTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\SyncLightTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ConsolePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DashboardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FilesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\FilterFilesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\PrintServerMessagesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\PrintServerSelectPrinterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\PrintServerConnectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\PrintServerViewModelDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\VersionDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsDemoModeSetupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsHelpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsLanguagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsLanguageTranslatorsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsPrintServerGcodeScripts.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsPrintServerLimitsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsPrintServerWebCamSetupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsPermissionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsQuickPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsSupportFAQPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsSupportTermsOfUsePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SetupGuide\SetupOctoPrintView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SetupGuide\WelcomeSetupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SetupGuide\WalkthroughItemPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\FindNetworkDevicePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\PrintServerNotConfiguredPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\PrintServerOfflinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PrintPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PrivacyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsLookAndFeelPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingsPrintServerConnectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TemperatureHistoryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WebActionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WebCamPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

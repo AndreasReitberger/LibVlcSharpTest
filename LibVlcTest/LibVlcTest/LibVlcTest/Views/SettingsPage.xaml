@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RemoteControlRepetierServer.Views.SettingsPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels"
+             xmlns:converters="clr-namespace:RemoteControlRepetierServer.Converters"            
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+             xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+             
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+       
+             Style="{StaticResource DefaultPageStyle}"
+             x:Name="root"
+             x:DataType="viewModels:SettingsViewModel"
+             >
+    <ContentPage.BindingContext>
+        <viewModels:SettingsViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+    </ContentPage.Resources>
+
+    <!-- OPTIMIZED -->
+
+    <Grid>
+        <ScrollView>
+            <StackLayout
+                Spacing="0"
+                CompressedLayout.IsHeadless="true"
+                >
+                <!-- Header -->
+                <Label 
+                    Text="{x:Static localization:Strings.Settings}" 
+                    Margin="0,8"
+                    Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                    />
+
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+
+</ContentPage>

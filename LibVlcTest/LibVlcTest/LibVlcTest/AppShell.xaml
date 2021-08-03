@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"  
+       x:Class="RemoteControlRepetierServer.AppShell"
+       
+       xmlns:views="clr-namespace:RemoteControlRepetierServer.Views"   
+       xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels"  
+       xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+       xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+       xmlns:converters="clr-namespace:RemoteControlRepetierServer.Converters"
+       
+       xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+       xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             
+       Style="{StaticResource DefaultShellStyle}"
+       >
+    <Shell.BindingContext>
+        <viewModels:AppShellViewModel x:Name="ViewModel" />
+    </Shell.BindingContext>
+
+    <Shell.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+    </Shell.Resources>
+    
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <ContentView 
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                HeightRequest="{OnIdiom Phone=92, Tablet=108, Default=92}">
+                <Grid>
+                    <Image 
+                        HeightRequest="24" 
+                        Margin="4"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        Source="Logo"
+                        />
+                </Grid>
+            </ContentView>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <ContentView 
+                BackgroundColor="{DynamicResource Gray-100}"
+                HeightRequest="{OnIdiom Phone=64, Tablet=80, Default=64}">
+                <controls:TapAnimationGrid
+                    Margin="{OnPlatform Android='15,4,4,20', Default='15,4,4,30'}"
+                    Style="{StaticResource DefaultGridStyle}"
+                    Command="{Binding ShowServerStateCommand}"
+                    >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Margin="16,0,0,0"
+                        >
+                        <Label.Style>
+                            <Style TargetType="Label" BasedOn="{StaticResource MaterialSettingsIconLabelStyle}">
+                                <Setter Property="Text" Value="{StaticResource MaterialDesign_CheckboxMarkedCircleOutline}"/>
+                                <Setter Property="TextColor" Value="{DynamicResource Green}"/>
+                                <Style.Triggers>
+                                    
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                    <Label
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Center"
+                        Margin="16,0,0,0"
+                        >
+                        <Label.Style>
+                            <Style TargetType="Label" BasedOn="{StaticResource SmallLabelStyle}">
+                                <Setter Property="Text" Value="{x:Static localization:Strings.CurrentServerStateGood}"/>
+                                <Style.Triggers>
+
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+
+                </controls:TapAnimationGrid>
+                <!--
+                <Grid
+                    Margin="{OnPlatform Android='15,4,4,20', Default='15,4,4,30'}"
+                    Style="{StaticResource DefaultGridStyle}"
+                    >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <buttons:SfButton 
+                        Style="{StaticResource IconButtonStyle}" 
+                        Command="{Binding RestartTimerCommand}"
+                        ShowIcon="False"
+                        Margin="0"
+                        >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Label 
+                                FontSize="{OnIdiom Phone=14, Tablet=16, Default=14}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                >
+                                <Label.Style>
+                                    <Style TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
+                                        <Setter Property="TextColor" Value="{DynamicResource Green}"/>
+                                        <Setter Property="Text" Value="{StaticResource MaterialDesign_AvTimer}"/>
+                                        <Style.Triggers>
+          
+                                            <DataTrigger 
+                                        TargetType="Label" 
+                                        Binding="{Binding TimerActive}"
+                                        Value="False">
+                                                <Setter Property="TextColor" Value="{DynamicResource Red}"/>
+                                                <Setter Property="Text" Value="{StaticResource MaterialDesign_AvTimer}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                            <Label 
+                                Grid.Row="1"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource SmallLabelStyle}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{x:Static localization:Strings.Timer}"/>
+                                            <Span Text=": "/>
+                                            <Span>
+                                                <Span.Style>
+                                                    <Style TargetType="Span">
+                                                        <Setter Property="Text" Value="{x:Static localization:Strings.On}"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger
+                                                        TargetType="Span" 
+                                                        Binding="{Binding TimerActive}"
+                                                        Value="False">
+                                                                <Setter Property="Text" Value="{x:Static localization:Strings.Off}"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Span.Style>
+                                            </Span>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </buttons:SfButton>
+                    <buttons:SfButton 
+                        Style="{StaticResource IconButtonStyle}" 
+                        Command="{Binding ReconnectWebSocketCommand}"
+                        ShowIcon="False"
+                        Grid.Column="1"
+                        Margin="0"
+                        >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Label 
+                                FontSize="{OnIdiom Phone=14, Tablet=16, Default=14}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                >
+                                <Label.Style>
+                                    <Style TargetType="Label" BasedOn="{StaticResource MaterialFontFamilyIconLabelStyle}">
+                                        <Setter Property="TextColor" Value="{DynamicResource Green}"/>
+                                        <Setter Property="Text" Value="{StaticResource MaterialDesign_Web}"/>
+                                        <Style.Triggers>
+                     
+                                            <DataTrigger 
+                                        TargetType="Label" 
+                                        Binding="{Binding IsListeningToWebsocket}"
+                                        Value="False">
+                                                <Setter Property="TextColor" Value="{DynamicResource Red}"/>
+                                                <Setter Property="Text" Value="{StaticResource MaterialDesign_Web}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                            <Label 
+                                Grid.Row="1"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Style="{StaticResource SmallLabelStyle}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{x:Static localization:Strings.WebSocket}"/>
+                                            <Span Text=": "/>
+                                            <Span>
+                                                <Span.Style>
+                                                    <Style TargetType="Span">
+                                                        <Setter Property="Text" Value="{x:Static localization:Strings.Connected}"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger
+                                                        TargetType="Span" 
+                                                        Binding="{Binding IsListeningToWebsocket}"
+                                                        Value="False">
+                                                                <Setter Property="Text" Value="{x:Static localization:Strings.Disconnected}"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Span.Style>
+                                            </Span>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </buttons:SfButton>
+                </Grid>
+                -->
+            </ContentView>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+    
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Horizontal">
+                <Image Margin="30,10,0,10" Source="{Binding Icon}" 
+                       WidthRequest="{OnIdiom Desktop=32, Tablet=28, Phone=22, Default=22}" 
+                       HeightRequest="{OnIdiom Desktop=32, Tablet=28, Phone=22, Default=22}" 
+                       HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label Text="{Binding Title}" 
+                       Style="{StaticResource ShellLabelStyle}"
+                       VerticalTextAlignment="Center"
+                       />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Orientation="Horizontal" x:Name="grid">
+                <StackLayout.Style>
+                    <Style TargetType="StackLayout">
+                        <Setter Property="VisualStateManager.VisualStateGroups">
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="{DynamicResource Transparent}"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="{DynamicResource Gray-300}"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="{DynamicResource Gray-100}"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </Setter>
+                    </Style>
+                </StackLayout.Style>
+                <Image Margin="30,10,0,10" Source="{Binding Icon}" 
+                       WidthRequest="{OnIdiom Desktop=32, Tablet=28, Phone=22, Default=22}" 
+                       HeightRequest="{OnIdiom Desktop=32, Tablet=28, Phone=22, Default=22}" 
+                       HorizontalOptions="Start" VerticalOptions="Center">
+                </Image>
+                <Label 
+                    Text="{Binding Title}" 
+                    VerticalTextAlignment="Center"
+                    >
+                    <Label.Style>
+                        <Style TargetType="Label" Class="FlyoutItemLabelStyle" BasedOn="{StaticResource ShellLabelStyle}">
+                            <Style.Triggers>
+                                <MultiTrigger TargetType="Label">
+                                    <MultiTrigger.Conditions>
+                                        <!-- -->
+                                        <BindingCondition Binding="{Binding Path=IsChecked, Source={x:RelativeSource AncestorType={x:Type FlyoutItem}}}" Value="true"/>
+
+                                        <!--
+                                        <BindingCondition Binding="{Binding Source={x:RelativeSource AncestorType={x:Type FlyoutItem}}, Path=IsChecked, Mode=OneWay}" Value="True"/>
+                                        -->
+                                        <!--
+                                        <BindingCondition Binding="{Binding Source={x:RelativeSource AncestorType={x:Type StackLayout}, AncestorLevel=1}, Path=BackgroundColor, Mode=OneWay}" Value="{DynamicResource Gray-100s}"/>
+                                        -->
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+                                </MultiTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <!-- Loading page -->
+    <ShellItem Route="LoadingPage" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate views:LoadingPage}"/>
+    </ShellItem>
+
+    <!-- Dashboard -->
+    <FlyoutItem 
+        Title="{x:Static localization:Strings.Dashboard}" 
+        Route="Dashboards"
+        >
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource MaterialFontFamily}"
+                Glyph="{StaticResource MaterialDesign_ViewDashboardOutline}"
+                Color="{DynamicResource PrimaryColor}"
+                Size="{OnPlatform Android={OnIdiom Desktop=56, Tablet=52, Phone=48, Default=48}, Default={OnIdiom Desktop=52, Default=48}}">
+            </FontImageSource>
+        </FlyoutItem.Icon>
+        <Tab Title="Dashboard" Route="DashboardPage">
+            <ShellContent 
+                Title="{x:Static localization:Strings.Dashboard}" 
+                ContentTemplate="{DataTemplate views:DashboardPage}"
+                >
+                <ShellContent.Icon>
+                    <FontImageSource
+                                FontFamily="{StaticResource MaterialFontFamily}"
+                                Glyph="{StaticResource MaterialDesign_ViewDashboardOutline}"
+                                Color="{DynamicResource PrimaryColor}"
+                                Size="{OnIdiom Desktop=56, Tablet=52, Phone=36, Default=36}"/>
+
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+
+    <MenuItem 
+        Text="{x:Static localization:Strings.PrivacyPolicy}" 
+        Command="{Binding ShowPrivacyCommand}"
+        >
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource MaterialFontFamily}"
+                Glyph="{StaticResource MaterialDesign_ShieldOutline}"
+                Color="{DynamicResource PrimaryColor}"
+                Size="{OnPlatform Android={OnIdiom Desktop=56, Tablet=52, Phone=48, Default=48}, Default={OnIdiom Desktop=52, Default=48}}">
+            </FontImageSource>
+        </MenuItem.IconImageSource>
+
+    </MenuItem>
+
+    <MenuItem 
+        Text="{x:Static localization:Strings.Settings}" 
+        Command="{Binding ShowSettingsCommand}"
+        >
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource FontIcons}"
+                Glyph="{StaticResource Settings}"
+                Color="{DynamicResource PrimaryColor}"
+                Size="{OnPlatform Android={OnIdiom Desktop=56, Tablet=52, Phone=48, Default=48}, Default={OnIdiom Desktop=52, Default=48}}">
+            </FontImageSource>
+        </MenuItem.IconImageSource>
+
+    </MenuItem>
+
+    <MenuItem 
+        Text="{x:Static localization:Strings.About}" 
+        Command="{Binding ShowAboutAppCommand}"
+        >
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource FontIcons}"
+                Glyph="{StaticResource FavOutline}"
+                Color="{DynamicResource PrimaryColor}"
+                Size="{OnPlatform Android={OnIdiom Desktop=56, Tablet=52, Phone=48, Default=48}, Default={OnIdiom Desktop=52, Default=48}}">
+            </FontImageSource>
+        </MenuItem.IconImageSource>
+
+    </MenuItem>
+
+    <!-- Version 
+    <ShellContent>
+        <ContentPage>
+            <Label Text="v1.0.0." />
+        </ContentPage>
+    </ShellContent>
+    -->
+</Shell>

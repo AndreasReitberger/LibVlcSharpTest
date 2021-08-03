@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RemoteControlRepetierServer.Views.AboutPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels"           
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+             xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+             
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"     
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"        
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             
+             Style="{StaticResource DefaultPageStyle}"
+             BackgroundColor="{DynamicResource Gray-100}"
+             x:Name="root"
+             x:DataType="viewModels:AboutPageViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <viewModels:AboutPageViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <!-- OPTIMIZED -->
+    <Shell.TitleView>
+        <Label 
+            Text="{x:Static localization:Strings.HeadlineAboutUs}" 
+            Style="{StaticResource TitleViewHeadlineLabelStyle}"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Margin="0,0,48,0"
+            />
+    </Shell.TitleView>
+
+    <!-- OPTIMIZED -->
+    <Grid 
+        BackgroundColor="{DynamicResource Gray-White}"
+        ColumnSpacing="0" 
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Content -->
+        <tabView:SfTabView 
+            Margin="0,2,0,16"
+            VisibleHeaderCount="3" 
+            Style="{StaticResource TabViewDefaultStyle}"
+            EnableSwiping="True" 
+            DisplayMode="Image"
+            >
+            <!-- About -->
+            <tabView:SfTabItem 
+                    Title="{x:Static localization:Strings.About}"
+                    IconFont="{StaticResource MaterialDesign_InformationOutline}"
+                    Style="{StaticResource ChildTabViewItemDefaultStyle}"
+                    >
+                <!-- About -->
+                <tabView:SfTabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <!-- Welcome -->
+                        <StackLayout
+                            CompressedLayout.IsHeadless="true"
+                            >
+
+                            <Label 
+                                Text="{x:Static localization:Strings.HeadlineWelcome}" 
+                                Style="{StaticResource PrimaryHeadlineLabelStyle}" 
+                                Margin="0,10,0,10"
+                                />
+
+                            <Label 
+                                Text="{x:Static localization:Strings.AboutUsIntroduction}" 
+                                Style="{StaticResource LabelStyle}" 
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                Margin="10"
+                                />
+
+                        </StackLayout>
+
+                        <!-- End line -->
+                        <StackLayout  
+                            Grid.Row="1"
+                            CompressedLayout.IsHeadless="true"
+                            >
+                            <StackLayout 
+                                CompressedLayout.IsHeadless="true"
+                                Orientation="Horizontal" 
+                                HorizontalOptions="Center"
+                                >
+                                <buttons:SfButton 
+                                        Text="{StaticResource MaterialDesign_Facebook}" 
+                                        Command="{Binding OpenSocialMediaPageCommand}" 
+                                        CommandParameter="Facebook"
+                                        Style="{StaticResource RoundMaterialDesignIconButtonStyle}"
+                                        BackgroundColor="{DynamicResource Blue}"
+                                        TextColor="{DynamicResource White}"
+                                        Margin="4,0"
+                                        />
+
+                                <buttons:SfButton 
+                                        Text="{StaticResource MaterialDesign_Instagram}" 
+                                        Command="{Binding OpenSocialMediaPageCommand}" 
+                                        CommandParameter="Instagram"
+                                        Style="{StaticResource RoundMaterialDesignIconButtonStyle}"
+                                        BackgroundColor="{DynamicResource Pink}"
+                                        TextColor="{DynamicResource White}"
+                                        Margin="4,0"
+                                        />
+                            </StackLayout>
+
+                            <Label 
+                                Margin="0,12"                                       
+                                Style="{StaticResource LabelStyle}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
+                                >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static localization:Strings.TaglineMadeWith}"/>
+                                        <Span Text=" "/>
+                                        <Span Text="{StaticResource FavOutline}" TextColor="{DynamicResource Red}" FontFamily="{StaticResource FontIcons}" />
+                                        <Span Text=" "/>
+                                        <Span Text="{x:Static localization:Strings.TaglineBy}"/>
+                                        <Span Text=" Andreas Reitberger"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                        </StackLayout>
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+
+            <!-- Used thirdparty software -->
+            <tabView:SfTabItem 
+                    Title="{x:Static localization:Strings.Attirbution}"
+                    IconFont="{StaticResource MaterialDesign_PackageVariantClosed}"
+                    Style="{StaticResource ChildTabViewItemDefaultStyle}"
+                    >
+                <tabView:SfTabItem.Content>
+                    <StackLayout>
+                        <Label 
+                                Text="{x:Static localization:Strings.HeadlineUsedThirdPartySoftwarePackages}" 
+                                Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                                Margin="0,10,0,10"
+                                />
+                        <!---->
+                        <listView:SfListView 
+                                x:Name="Software"
+                                Margin="0,0,0,12"
+                                SelectionMode="None" 
+                                AutoFitMode="Height" 
+                                ItemSpacing="2" 
+                                ItemsSource="{Binding Libraries}"
+                                ItemTemplate="{StaticResource ThirdPartyAttributionItemTemplate}"
+                                IsStickyHeader="False" 
+                                AllowSwiping="False"
+                                />
+
+                    </StackLayout>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+
+            <!-- Used thirdparty resources -->
+            <tabView:SfTabItem 
+                    Title="{x:Static localization:Strings.Resources}"
+                    IconFont="{StaticResource MaterialDesign_PaletteOutline}"
+                    Style="{StaticResource ChildTabViewItemDefaultStyle}"
+                    >
+                <tabView:SfTabItem.Content>
+                    <StackLayout>
+                        <Label 
+                            Text="{x:Static localization:Strings.HeadlineUsedThirdPartySoftwareResources}" 
+                            Style="{StaticResource PrimaryHeadlineLabelStyle}"
+                            Margin="0,10,0,10"/>
+                        <listView:SfListView 
+                            x:Name="sflvResources"
+                            Style="{StaticResource TabViewDefaultStyle}"
+                            IsScrollBarVisible="False"
+                            Margin="0,0,0,12"
+                            ItemSize="0" 
+                            SelectionMode="None" 
+                            AutoFitMode="DynamicHeight" 
+                            ItemSpacing="2" 
+                            ItemsSource="{Binding Resources}"
+                            ItemTemplate="{StaticResource ThirdPartyResourcesAttributionItemTemplate}"
+                            IsStickyHeader="True" 
+                            />
+
+                    </StackLayout>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
+        <!--
+        <Grid
+            Grid.Row="2" 
+            Grid.ColumnSpan="3"
+            BackgroundColor="{DynamicResource Gray-White}"
+            >  
+        </Grid>
+        -->
+
+        <!--<StackLayout Grid.Row="3" Grid.ColumnSpan="3">-->
+            <!--  Show build details  -->
+        <controls:TapAnimationGrid
+            Grid.Row="1" 
+            Style="{StaticResource DefaultTapAnimationGridStyle}"
+            Command="{Binding ShowBuildDetailsCommand}"
+            BackgroundColor="{DynamicResource Gray-100}"
+            Tapped="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="0" HorizontalOptions="CenterAndExpand"
+                Grid.ColumnSpan="2"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource MediumLabelStyle}"
+                Text="{Binding Version}" />
+            <Label
+                Grid.Column="1"
+                Style="{StaticResource IconLabelStyle}"
+                Text="{StaticResource Next}" />
+        </controls:TapAnimationGrid>
+        <!--</StackLayout>-->
+    </Grid>
+
+</ContentPage>

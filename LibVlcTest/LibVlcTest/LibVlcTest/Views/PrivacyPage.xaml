@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RemoteControlRepetierServer.Views.PrivacyPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels"
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+             
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             
+             Style="{StaticResource DefaultPageStyle}"
+             x:Name="root"
+             x:DataType="viewModels:PrivacyPageViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <viewModels:PrivacyPageViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <!-- OPTIMIZED -->
+    <Shell.TitleView>
+        <Grid
+            Style="{StaticResource ShellTitleViewGridStyle}"
+            >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Title -->
+            <Label 
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0,0,48,0"
+                >
+                <Label.Style>
+                    <Style TargetType="Label" BasedOn="{StaticResource TitleViewHeadlineLabelStyle}">
+                        <Setter Property="Text" Value="{x:Static localization:Strings.PrivacyPolicy}"/>
+                    </Style>
+                </Label.Style>
+            </Label>
+            
+            <!-- Quick Setup -->
+            <buttons:SfButton 
+                Grid.Column="1"
+                Style="{StaticResource IconButtonStyle}" 
+                ShowIcon="False"
+                Command="{Binding ShowPrivacySettingsCommand}"
+                Text="{StaticResource Privacy}"
+                Margin="0"
+                TextColor="{DynamicResource PrimaryColor}"
+                />
+        </Grid>
+    </Shell.TitleView>
+
+    <!-- OPTIMIZED -->
+    <Grid 
+        ColumnSpacing="0" 
+        RowSpacing="0"
+        BackgroundColor="{DynamicResource Gray-White}" 
+        >
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout
+            CompressedLayout.IsHeadless="true"
+            >
+            <Label 
+                Text="{x:Static localization:Strings.PrivacyPolicyIntroduction}" 
+                Style="{StaticResource LabelStyle}"
+                HorizontalTextAlignment="Center"
+                Margin="10,20"
+                />
+            <buttons:SfButton    
+                Margin="20"
+                Command="{Binding OpenWebSiteCommand}"
+                TextColor="{DynamicResource PrimaryColor}"
+                BorderColor="{DynamicResource PrimaryColor}"
+                Style="{StaticResource RoundedLongButtonStyle}"
+                Text="{x:Static localization:Strings.ReadPrivacyPolicy}"
+                />
+        </StackLayout>
+
+        <buttons:SfButton    
+            Grid.Row="1"
+            Margin="20"
+            Command="{Binding ShowPrivacySettingsCommand}"
+            TextColor="{DynamicResource PrimaryColor}"
+            BorderColor="{DynamicResource PrimaryColor}"
+            Style="{StaticResource RoundedLongButtonStyle}"
+            Text="{x:Static localization:Strings.ButtonPrivacySettings}"
+            />
+
+    </Grid>
+</ContentPage>

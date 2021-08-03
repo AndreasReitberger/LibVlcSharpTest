@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RemoteControlRepetierServer.Views.Pages.ProjectOverviewPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels.Pages"
+             xmlns:converters="clr-namespace:RemoteControlRepetierServer.Converters"
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+             xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+             
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"           
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             
+             Style="{StaticResource DefaultPageStyle}"
+             x:Name="root"
+             x:DataType="viewModels:ProjectOverviewPageViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <viewModels:ProjectOverviewPageViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+        <converters:DoubleHoursToTimeSpanConverter x:Key="DoubleHoursToTimeSpanConverter" />
+    </ContentPage.Resources>
+
+    <!-- OPTIMIZED -->
+    <Shell.TitleView>
+        <Label 
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Margin="0,0,48,0"
+            Style="{StaticResource TitleViewHeadlineLabelStyle}"
+            Text="{x:Static localization:Strings.HeadlineProjectOverview}"
+            >
+        </Label>
+    </Shell.TitleView>
+
+    <!-- OPTIMIZED -->
+    <Grid BackgroundColor="{DynamicResource Gray-White}"    >
+        <!-- Main content -->
+        <Grid 
+            ColumnSpacing="0" 
+            RowSpacing="0" 
+            Margin="10,2,10,16"
+            CompressedLayout.IsHeadless="true"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout 
+                Spacing="0"
+                CompressedLayout.IsHeadless="true"
+                >
+                <Label 
+                    Text="{x:Static localization:Strings.ProjectOverviewGitHubIntroduction}" 
+                    Style="{StaticResource LabelStyle}" 
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,10,0,10"/>
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+
+                <!-- Actions -->
+                <Label
+                    Style="{StaticResource SettingsLabelStyle}"
+                    VerticalTextAlignment="Center"
+                    Text="{x:Static localization:Strings.Actions}"
+                    HorizontalTextAlignment="Start" 
+                    />
+
+                <!--  Bug Submit  -->
+                <controls:TapAnimationGrid
+                    Style="{StaticResource DefaultTapAnimationGridStyle}"
+                    Command="{Binding OpenSubmitBugCommand}"
+                    Tapped="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--  Edit profile icon  -->
+                    <Label
+                        Grid.Column="0"
+                        Margin="16,0,0,0"
+                        Style="{StaticResource MaterialSettingsIconLabelStyle}"
+                        Text="{StaticResource MaterialDesign_Bug}" />
+                    <!--  Edit profile label  -->
+                    <Label
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource MediumLabelStyle}"
+                        Text="{x:Static localization:Strings.SubmitIssue}" />
+                    <!--  Navigation icon  -->
+                    <Label
+                        Grid.Column="2"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource Next}" />
+                </controls:TapAnimationGrid>
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+
+                <!--  Feature Submit  -->
+                <controls:TapAnimationGrid
+                    Style="{StaticResource DefaultTapAnimationGridStyle}"
+                    Command="{Binding OpenSubmitFeatureCommand}"
+                    Tapped="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--  Edit profile icon  -->
+                    <Label
+                        Grid.Column="0"
+                        Margin="16,0,0,0"
+                        Style="{StaticResource MaterialSettingsIconLabelStyle}"
+                        Text="{StaticResource MaterialDesign_PlaylistPlus}" />
+                    <!--  Edit profile label  -->
+                    <Label
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource MediumLabelStyle}"
+                        Text="{x:Static localization:Strings.SubmitFeatureRequest}" />
+                    <!--  Navigation icon  -->
+                    <Label
+                        Grid.Column="2"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource Next}" />
+                </controls:TapAnimationGrid>
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+            </StackLayout>
+
+            <!-- Button -->
+            <StackLayout 
+                Grid.Row="1"
+                CompressedLayout.IsHeadless="true"
+                >
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+                <button:SfButton
+                    Command="{Binding OpenProjectWebsiteCommand}"
+                    Text="{x:Static localization:Strings.ButtonViewProjectWebsite}"
+                    Style="{StaticResource RoundedLongButtonStyle}"
+                    />
+            </StackLayout>
+        </Grid>
+
+        <!-- IsBusy Overlay -->
+        <busyindicator:SfBusyIndicator 
+            IsBusy="{Binding IsBusy}"
+            Style="{StaticResource LoadingBusyIndicatorStyle}"
+            BackgroundColor="{DynamicResource Gray-100}"
+            />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RemoteControlRepetierServer.Views.LoadingPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels"
+             xmlns:converters="clr-namespace:RemoteControlRepetierServer.Converters"     
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+             xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+             
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:PullToRefresh="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"            
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             
+             Style="{StaticResource DefaultPageStyle}"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             x:DataType="viewModels:LoadingPageViewModel"
+             >
+    <ContentPage.BindingContext>
+        <viewModels:LoadingPageViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+    </ContentPage.Resources>
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            Command="{Binding GoBackCommand}"
+            TextOverride="{x:Static localization:Strings.Close}" >
+
+            <BackButtonBehavior.IconOverride>
+                <FontImageSource
+                FontFamily="{StaticResource FontIcons}"
+                Glyph="{StaticResource Close}"
+                Size="{OnIdiom Desktop=28, Tablet=28, Phone=24, Default=24}"
+                Color="{DynamicResource Primary}"
+                />
+
+            </BackButtonBehavior.IconOverride>
+        </BackButtonBehavior>
+
+    </Shell.BackButtonBehavior>
+
+    <!-- OPTIMIZED -->
+    <Grid
+        BackgroundColor="{DynamicResource Gray-100}"
+        >
+        <Grid
+            IsVisible="{Binding IsReachable}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="64"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- Success  -->
+            <Label
+                Grid.Row="1"
+                Margin="8,0,8,0"
+                Style="{StaticResource LabelStyle}"
+                Text="{x:Static localization:Strings.ConnectionEstablishedRedirectingDots}"
+                TextColor="{DynamicResource Green}"
+                HorizontalTextAlignment="Center"
+                />
+        </Grid>
+
+        <Grid 
+            IsVisible="{Binding IsReachable, Converter={StaticResource BooleanReverseVisibilityConverter}}"
+            ColumnSpacing="10"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Device Settings -->
+            <buttons:SfButton 
+                        VerticalOptions="Start"
+                        Grid.Column="1"
+                        Style="{StaticResource MaterialDesignIconButtonStyle}" 
+                        ShowIcon="False"
+                        Command="{Binding GoToDeviceSettingsCommand}"
+                        Text="{StaticResource MaterialDesign_CellphoneCog}"
+                        Margin="{OnPlatform Android='4,30', Default='4,50'}"
+                        TextColor="{DynamicResource PrimaryColor}"
+                        />
+
+            <!-- Idle -->
+            <StackLayout 
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center"
+                Spacing="0"
+                CompressedLayout.IsHeadless="true"
+                >
+
+                <Label
+                    Margin="20,4"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    Text="{StaticResource MaterialDesign_WifiOff}"
+                    TextColor="{DynamicResource Error}"
+                    VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Center"
+                    />
+
+                <!--  Label to display content  -->
+                <Label
+                    Margin="20,4"
+                    Style="{StaticResource SettingsLabelStyle}"
+                    Text="{x:Static localization:Strings.WarningPrinterIsOfflineOrMissConfigured}"
+                    VerticalTextAlignment="Center" 
+                    HorizontalTextAlignment="Center"
+                    />
+
+                <Label 
+                    Text="{x:Static localization:Strings.CurrentlySelectedServer}"
+                    Style="{StaticResource SettingsLabelStyle}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="0"
+                    />
+            </StackLayout>
+        </Grid>
+
+        <!-- Overlays -->
+        <busyindicator:SfBusyIndicator 
+            IsBusy="{Binding IsChecking}"
+            Style="{StaticResource LoadingBusyIndicatorStyle}"
+            BackgroundColor="{DynamicResource Gray-100}"
+            />
+    </Grid>
+</ContentPage>

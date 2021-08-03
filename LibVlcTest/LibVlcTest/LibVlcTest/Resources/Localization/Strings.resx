@@ -1,0 +1,2532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutServer" xml:space="preserve">
+    <value>About Your Server</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="AboutUsIntroduction" xml:space="preserve">
+    <value>Welcome to our Remote Control App for Repetier Server Pro. Thank you for downloading and using our app.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="ActionSelectWebCam" xml:space="preserve">
+    <value>Select webcam</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="AgreePersonalizedAds" xml:space="preserve">
+    <value>Personalized ads</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="AgreeSendErrorLog" xml:space="preserve">
+    <value>I agree, please send the log</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>All files</value>
+  </data>
+  <data name="AllowAppCenterAnalytics" xml:space="preserve">
+    <value>Allow AppCenter analytics data</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="AllowAppTrackingIOS" xml:space="preserve">
+    <value>Allow app tracking (iOS)</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="AllowCrashAnalyticsData" xml:space="preserve">
+    <value>Allow crash analytics data</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="AllowPersonalizedAds" xml:space="preserve">
+    <value>Allow personalized ads</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ApiKey" xml:space="preserve">
+    <value>API key</value>
+  </data>
+  <data name="AppErrorWarning" xml:space="preserve">
+    <value>There was at least one error while using the app. Click to get more details.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Attirbution" xml:space="preserve">
+    <value>Attirbution</value>
+  </data>
+  <data name="AutoCloseInFormatedNotificationDots" xml:space="preserve">
+    <value>The background mode will be stopped in about '{0}' seconds due to your inactivity settings...</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="AutoStartWebCamStream" xml:space="preserve">
+    <value>Autostart WebCam stream</value>
+  </data>
+  <data name="Backup" xml:space="preserve">
+    <value>Backup</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="BackupSettings" xml:space="preserve">
+    <value>Backup settings</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ButtonAdd" xml:space="preserve">
+    <value>ADD</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ButtonApplyColor" xml:space="preserve">
+    <value>APPLY COLOR</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="ButtonApplyFilter" xml:space="preserve">
+    <value>APPLY FILTER</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ButtonBackupNow" xml:space="preserve">
+    <value>BACKUP NOW</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ButtonClear" xml:space="preserve">
+    <value>CLEAR</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>CLOSE</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ButtonConnect" xml:space="preserve">
+    <value>CONNECT</value>
+  </data>
+  <data name="ButtonConnecting" xml:space="preserve">
+    <value>CONNECTING...</value>
+  </data>
+  <data name="ButtonCreateNow" xml:space="preserve">
+    <value>CREATE NOW</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ButtonDisconnect" xml:space="preserve">
+    <value>DISCONNECT</value>
+  </data>
+  <data name="ButtonGoPro" xml:space="preserve">
+    <value>GO PRO</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NotAvailableDots" xml:space="preserve">
+    <value>Not available...</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="ButtonLogin" xml:space="preserve">
+    <value>LOGIN</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="ButtonOK" xml:space="preserve">
+    <value>OK</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ButtonOpenErrorLog" xml:space="preserve">
+    <value>OPEN ERROR LOG</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ButtonOpenFullChanglog" xml:space="preserve">
+    <value>FULL CHANGELOG</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ButtonOpenSettings" xml:space="preserve">
+    <value>OPEN SETTINGS</value>
+  </data>
+  <data name="ButtonPrivacySettings" xml:space="preserve">
+    <value>PRIVACY SETTINGS</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ButtonRestore" xml:space="preserve">
+    <value>RESTORE</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>SAVE</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ButtonSaveConfiguration" xml:space="preserve">
+    <value>SAVE CONFIGURATION</value>
+  </data>
+  <data name="ButtonUnderstood" xml:space="preserve">
+    <value>UNDERSTOOD</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="ButtonUpdateNow" xml:space="preserve">
+    <value>UPDATE NOW</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ButtonUsePrinter" xml:space="preserve">
+    <value>USE PRINTER</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="ButtonUseServer" xml:space="preserve">
+    <value>USE SERVER</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ButtonViewProjectWebsite" xml:space="preserve">
+    <value>PROJECT WEBSITE</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>By</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ChangeSelectedPrinter" xml:space="preserve">
+    <value>Change selected printer</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseAppInBackgroundModeIfNoPrintIsActive" xml:space="preserve">
+    <value>Close app in background if no print is active?</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="CommentPublishedAt" xml:space="preserve">
+    <value>at</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="Connection" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="ConnectionEstablishedRedirectingDots" xml:space="preserve">
+    <value>Connection established, redirecting...</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="Console" xml:space="preserve">
+    <value>Console</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>Control Panel</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CurrentlySelectedServer" xml:space="preserve">
+    <value>Currently selected server</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="CurrentServerStateError" xml:space="preserve">
+    <value>Cirtical server error, please check...</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="CurrentServerStateGood" xml:space="preserve">
+    <value>Server is operational</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="CurrentServerStateWarning" xml:space="preserve">
+    <value>Server operates restricted...</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DarkeModeIsSetOnDeviceSettings" xml:space="preserve">
+    <value>Darkmode depends ons your device settings</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Decline</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Decrypt" xml:space="preserve">
+    <value>Decrypt</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DemoMode" xml:space="preserve">
+    <value>Demo mode</value>
+  </data>
+  <data name="DemoModeIsOn" xml:space="preserve">
+    <value>Demo mode is on</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="DialogActionNotAvailableInDemoModeContent" xml:space="preserve">
+    <value>This action is not available as long as the demo mode is turned on. Please turn of the demo mode at your settings and connect to your OctoPrint server first.</value>
+  </data>
+  <data name="DialogActionNotAvailableInDemoModeHeadline" xml:space="preserve">
+    <value>Action not available</value>
+  </data>
+  <data name="DialogApiAuthErrorOccurredFormatedContent" xml:space="preserve">
+    <value>The selected server '{0}' has an authentication error. This may be caused by an invalid API key. We'll redirect you to the settings page. Please double check your servers API key and try again.</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="DialogApiAuthErrorOccurredHeadline" xml:space="preserve">
+    <value>Authentication error occurred</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="DialogAtLeastOneAxisNotHomedContent" xml:space="preserve">
+    <value>At least one axis is not homed. You need to home your printer first before can control the axes. Do you want to home all axis now? Double check that your print area is clean and your printer is not working! Also, don't perform this unattended! </value>
+    <comment>v1.0.12</comment>
+  </data>
+  <data name="DialogAtLeastOneAxisNotHomedHeadline" xml:space="preserve">
+    <value>Not homed</value>
+    <comment>v1.0.12</comment>
+  </data>
+  <data name="DialogBackupFileCreatedSuccessfullyFormatedContent" xml:space="preserve">
+    <value>The backup file '{0}' was created successfully on your device.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogBackupFileCreatedSuccessfullyHeader" xml:space="preserve">
+    <value>Backup file created successfully</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogBackupFileNotValidFormatedContent" xml:space="preserve">
+    <value>The selected backup file '{0}' is not valid. Please select a valid file ending with '.json' and try again.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogBackupFileNotValidHeadline" xml:space="preserve">
+    <value>Backup file invalid</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogCancelPrintContent" xml:space="preserve">
+    <value>Are you sure that you want to cancel the print? The print will be lost and this should not be done unattended!</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogCancelPrintHeadline" xml:space="preserve">
+    <value>Cancel Print</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogCannotSwitchToThisServerDueToInvalidConfiguratioFormatedContent" xml:space="preserve">
+    <value>The server '{0}' cannot be set active due to an authentication error. Please check your API key first and try again.</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="DialogCannotSwitchToThisServerDueToInvalidConfigurationHeadline" xml:space="preserve">
+    <value>Configuration is invalid</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="DialogClipboardIsEmptyOrInvalidContent" xml:space="preserve">
+    <value>The clipboard seems to be empty or the content is not a text.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogClipboardIsEmptyOrInvalidHeadline" xml:space="preserve">
+    <value>Clipboard content empty or invalid</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogConfirmGoBackContent" xml:space="preserve">
+    <value>Are you sure that you want to go back? This will result in loosing any unsaved information on this page.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="DialogConfirmGoBackHeadline" xml:space="preserve">
+    <value>Leaving page...</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="DialogConfirmSecurityQuestionFomratedContent" xml:space="preserve">
+    <value>This task '{0}' needs to be confirmed before you can start it. Security question: {1}</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogConfirmSecurityQuestionHeadline" xml:space="preserve">
+    <value>Security question</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogConnectionFailedFormatedContent" xml:space="preserve">
+    <value>The connection to the server '{0}' failed. Please find more information of the issue below: {1}</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogConnectionFailedHeadline" xml:space="preserve">
+    <value>Connection failed</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogDeleteFolderFormatedContent" xml:space="preserve">
+    <value>Are you sure that you want to delete the folder '{0}'? This will remove all models included and cannot be undone!</value>
+  </data>
+  <data name="DialogDeleteFolderHeadline" xml:space="preserve">
+    <value>Delete folder</value>
+  </data>
+  <data name="DialogDeleteItemFormatedContent" xml:space="preserve">
+    <value>Are you sure that you want to delete '{0}'? This cannot be undone!</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogDeleteItemHeadline" xml:space="preserve">
+    <value>Delete item</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogDeleteItemsFormatedContent" xml:space="preserve">
+    <value>Are you sure that you want to delete the selected item(s) ('{0}' items selected)? This cannot be undone!</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogDeleteItemsHeadline" xml:space="preserve">
+    <value>Delete item(s)</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogDeleteMessageFormatedContent" xml:space="preserve">
+    <value>Are you sure that you want to delete the message '{0}' from the server?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogDeleteMessageHeadline" xml:space="preserve">
+    <value>Delete message</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogDeleteModelFormatedContent" xml:space="preserve">
+    <value>Are you sure that you want to delete the model '{0}'? This cannot be undone!</value>
+  </data>
+  <data name="DialogDeleteModelHeadline" xml:space="preserve">
+    <value>Delete model</value>
+  </data>
+  <data name="DialogEditElementFormatedContent" xml:space="preserve">
+    <value>Please edit the {0} below.</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="DialogEditElementHeadline" xml:space="preserve">
+    <value>Edit</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="DialogEmergencyStopPrinterContent" xml:space="preserve">
+    <value>This will send an emergency stop to the printer. Are you absolutely sure that you want to do this? An active print will be lost!</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="DialogEmergencyStopPrinterHeadline" xml:space="preserve">
+    <value>Emergency stop</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="DialogEnableDemoModeContent" xml:space="preserve">
+    <value>Do you want to activate the demo mode? This will start the app with static demo data for visualisation. You can turn of the demo mode in the settings later.</value>
+  </data>
+  <data name="DialogEnableDemoModeHeadline" xml:space="preserve">
+    <value>Activate demo mode</value>
+  </data>
+  <data name="DialogEnterNewFolderNameContent" xml:space="preserve">
+    <value>Enter the name for the new folder below.</value>
+  </data>
+  <data name="DialogEnterNewFolderNameHeadline" xml:space="preserve">
+    <value>New folder</value>
+  </data>
+  <data name="DialogEnterPasswordFormatedContent" xml:space="preserve">
+    <value>Please enter the password to decrypt the file '{0}'.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogEnterPasswordHeadline" xml:space="preserve">
+    <value>Enter password</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogEnterValueFormatedContent" xml:space="preserve">
+    <value>Please enter a value for '{0}'.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DialogEnterValueHeadline" xml:space="preserve">
+    <value>Enter value</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DialogExportReportFormatedContent" xml:space="preserve">
+    <value>Do you want to export the report '{0}' as '{1}'?</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DialogExportReportHeadline" xml:space="preserve">
+    <value>Export report</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DialogFileUploadFailedFormatedHeadline" xml:space="preserve">
+    <value>The file '{0}' failed to be uploaded to your print server. Please try again.</value>
+  </data>
+  <data name="DialogFileUploadFailedHeadline" xml:space="preserve">
+    <value>File upload failed</value>
+  </data>
+  <data name="DialogFunctionNotAvailableYetContent" xml:space="preserve">
+    <value>This function isn't available in the current release, but will be added later with an update.</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogFunctionNotAvailableYetHeadline" xml:space="preserve">
+    <value>Function not available yet</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogGoBackToDashboardContent" xml:space="preserve">
+    <value>Do you want to go back to the dashboard? </value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogGoBackToDashboardHeadline" xml:space="preserve">
+    <value>Go back to dashboard</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogHasActivePrintJobContent" xml:space="preserve">
+    <value>You have an active print job running. You cannot disconnect your printer now...</value>
+  </data>
+  <data name="DialogHasActivePrintJobHeadline" xml:space="preserve">
+    <value>Active print job</value>
+  </data>
+  <data name="DialogHomeAllAxisContent" xml:space="preserve">
+    <value>Do you want to home all axes now? Please double check that your printer is ready to perform this action! Otherwise the printer could be damaged! Proceed?</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogHomeAllAxisHeadline" xml:space="preserve">
+    <value>Home all axes</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogHomeAxisFormatedContent" xml:space="preserve">
+    <value>Do you want to home the '{0}' now? Please double check that your printer is ready to perform this action! Otherwise the printer could be damaged! Proceed?</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogHomeAxisFormatedHeadline" xml:space="preserve">
+    <value>Home '{0}' axis</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogNoReportAvailableFormatedContent" xml:space="preserve">
+    <value>There is no report available for '{0}'!</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DialogNoReportAvailableHeadline" xml:space="preserve">
+    <value>No report available</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="DialogOpenBackupFileToShareContent" xml:space="preserve">
+    <value>Do you want to view and share the backup file, so that you can restore it on another device?</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogOpenBackupFileToShareHeadline" xml:space="preserve">
+    <value>Share backup file?</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogOpenExternalUriFormatedContent" xml:space="preserve">
+    <value>This will open the external link '{0}'. We cannot affect the content provided on the external page. Proceed?</value>
+  </data>
+  <data name="DialogOpenExternalUriHeadline" xml:space="preserve">
+    <value>Open external link</value>
+  </data>
+  <data name="DialogPasswordInvalidFormatedContent" xml:space="preserve">
+    <value>The password you entered is not valid. Please make sure that your password is at least '{0}' chars long and try again.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogPasswordInvalidHeadline" xml:space="preserve">
+    <value>Password invalid</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogPausePrintContent" xml:space="preserve">
+    <value>Are you sure that you want to pause the current print? This should not be done unattended!</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogPausePrintHeadline" xml:space="preserve">
+    <value>Pause Print</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogPermissionNeededFormatContent" xml:space="preserve">
+    <value>The denied permission '{0}' ({1}) is needed to perform this action. If you want to change your settings, please visit our settings in the app or the global app settings to allow the permission needed. </value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogPermissionNeededHeadline" xml:space="preserve">
+    <value>Permission is needed</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogPrintModelFormatedContent" xml:space="preserve">
+    <value>Do you want to start printing the model '{0}'? Please double check that your printer is ready for a print!</value>
+  </data>
+  <data name="DialogPrintModelHeadline" xml:space="preserve">
+    <value>Print model</value>
+  </data>
+  <data name="DialogRestApiErrorOccurredFormatedContent" xml:space="preserve">
+    <value>There was an error while sending a request to your server '{0}' via the Rest-API. This could be caused by an invalid API key. If this error persists, please contact our support. Error details: {1}</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogRestApiErrorOccurredHeadline" xml:space="preserve">
+    <value>Rest-API error occurred</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogRestartTimerManuallyContent" xml:space="preserve">
+    <value>The timer has stopped. Do you want to restart the timer manually now?</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="DialogRestartTimerManuallyHeadline" xml:space="preserve">
+    <value>Restart timer manually</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="DialogRestoreCompletedContent" xml:space="preserve">
+    <value>The restore process has been completed succesfully.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogRestoreCompletedHeadline" xml:space="preserve">
+    <value>Restore completed</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogResumePrintContent" xml:space="preserve">
+    <value>Are you sure that you want to resume the current print? This should not be done unattended!</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogResumePrintHeadline" xml:space="preserve">
+    <value>Resume Print</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogSelectedPrinterIsOfflineFormatedContent" xml:space="preserve">
+    <value>The selected printer '{0}' is offline. Are you sure that you want to set this as active printer?</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogSelectedPrinterIsOfflineHeadline" xml:space="preserve">
+    <value>Selected printer is offline</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogSelectedServerIsOfflineFormatedContent" xml:space="preserve">
+    <value>The selected server '{0}' seems to be offline. Are you sure that you want to switch?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogSelectedServerIsOfflineHeadline" xml:space="preserve">
+    <value>Selected server is offline</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogSendErrorReportToDeveloperFormatedContent" xml:space="preserve">
+    <value>This will send the errors listed on this page to the developers mail address '{0}' using your default mail program and your default mail address. We may contact you to get further details. We only use the provided mail address to contact you. Please read our privacy policy for more information and the storage of your personal data. If you don't agree with this, just cancel this dialog and no information will be sent. Thanks for helping out making this app better!</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogSendErrorReportToDeveloperHeadline" xml:space="preserve">
+    <value>Send error report</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogServerIsAlreadySetActiveFormatedContent" xml:space="preserve">
+    <value>The selected server '{0}' is already set active. Reload either way?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogServerIsAlreadySetActiveHeadline" xml:space="preserve">
+    <value>Server already set active</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogServerIsNotConfiguredContent" xml:space="preserve">
+    <value>Your server settings aren't valid. Please go to your settings and setup your server connection first.</value>
+  </data>
+  <data name="DialogServerIsNotConfiguredHeadline" xml:space="preserve">
+    <value>Server is offline</value>
+  </data>
+  <data name="DialogServerIsOfflineFormatedContent" xml:space="preserve">
+    <value>Your server with the address '{0}' is not responding. Please check if your server is running and try again.</value>
+  </data>
+  <data name="DialogServerIsOfflineHeadline" xml:space="preserve">
+    <value>Server is offline</value>
+  </data>
+  <data name="DialogServerUnreachableFormatedContent" xml:space="preserve">
+    <value>The server is not responding th the address '{0}'. Please make sure that your entered address is valid, your server is turned on and you are connected to your local wifi.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogServerUnreachableHeadline" xml:space="preserve">
+    <value>Server not reachable</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogShowPersonalizedAdsContent" xml:space="preserve">
+    <value>Do you want that the app shows you personalized ads based on cookies? This helps us to show better matching content in the ads. You always can change this choice in your app settings. Read more in our privacy policy.</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="DialogShowPersonalizedAdsHeadline" xml:space="preserve">
+    <value>Show personalized ads</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="DialogStartServerAutoUpdateFormatedContent" xml:space="preserve">
+    <value>Are you sure that you want to start the auto update for the server '{0}'? Make sure that no print job is running!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogStartServerAutoUpdateHeadline" xml:space="preserve">
+    <value>Start auto update</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogSwitchToSelectedPrinterFormatedContent" xml:space="preserve">
+    <value>Do you want to switch to the selected printer '{0}'? This will reload the dashboard and set this printer as active.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogSwitchToSelectedPrinterHeadline" xml:space="preserve">
+    <value>Switch printer</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogSwitchToSelectedServerFormatedContent" xml:space="preserve">
+    <value>Do you want to switch to the selected server '{0}'?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogSwitchToSelectedServerHeadline" xml:space="preserve">
+    <value>Switch server</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="DialogTimerStoppedContent" xml:space="preserve">
+    <value>The timer has been stopped due to a timeout. Do you want trying to restart the timer now?</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogTimerStoppedHeadline" xml:space="preserve">
+    <value>Timer stopped</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="DialogUnexpectedErrorOccurredFormatedContent" xml:space="preserve">
+    <value>An unexpected error occured. Message: '{0}'</value>
+  </data>
+  <data name="DialogUnexpectedErrorOccurredHeadline" xml:space="preserve">
+    <value>Unexpected error occurred</value>
+  </data>
+  <data name="DialogWarningNotDefaultPortFormatedContent" xml:space="preserve">
+    <value>The selected port '{0}' is not the default value from the server ('{1}'). Only change the port if you know what you are doing. Otherwise the connection to the server will fail!</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="DialogWarningNotDefaultPortHeadline" xml:space="preserve">
+    <value>Port is not the default value</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="DialogWarningNotDefaultSslContent" xml:space="preserve">
+    <value>Your settings for SSL is not the servers default. Change this setting only if you know what you are doing and your server is reachable over https://!</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="DialogWarningNotDefaultSslHeadline" xml:space="preserve">
+    <value>SSL setting is not default</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="DialogWarningRestoreFromBackupContent" xml:space="preserve">
+    <value>You're about to restore some or all settings from a backup file. Are you sure that you want to proceed? All existing data, which are selected for restoring, will be overwritten and updated to the values from the backup file!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogWarningRestoreFromBackupHeadline" xml:space="preserve">
+    <value>Restore from backup file</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="DialogWebActionStartedSuccessfullyFormatedContent" xml:space="preserve">
+    <value>The action '{0}' was started successfully.</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogWebActionStartedSuccessfullyHeadline" xml:space="preserve">
+    <value>Action started successfully</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogWebActionStartFailedFormatedContent" xml:space="preserve">
+    <value>The action '{0}' couldn't be started succesfully. Please try again.</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogWebActionStartFailedHeadline" xml:space="preserve">
+    <value>Action failed starting</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="DialogWebCamSettingsAlreadyExistsForThisCombinationFormatedContent" xml:space="preserve">
+    <value>An already exisitng custom setting for the combinition of the printer '{0}' and webcam index '{1} was already found. Do you want to overwrite it? Click cancel to get back to the input form in order to change your settings. </value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="DialogWebCamSettingsAlreadyExistsForThisCombinationHeadline" xml:space="preserve">
+    <value>Custom webcam settings already exists</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="DialogWifiDeactivatedOrInstableNoticeContent" xml:space="preserve">
+    <value>This symbol indicates that your wifi is disabled or instable. You can ignore this if you are using a VPN connection. Otherwise make sure to turn on your wifi and ensure a stable connection to it. Otherwise it could lead to connection losts.</value>
+    <comment>v1.0.14</comment>
+  </data>
+  <data name="DialogWifiDeactivatedOrInstableNoticeHeadline" xml:space="preserve">
+    <value>Wifi deactivated or instable</value>
+    <comment>v1.0.14</comment>
+  </data>
+  <data name="DialogWifiIsOffContent" xml:space="preserve">
+    <value>Wifi is turned off on your device.You need to be connected to your local network in order to get access to your print server. If you are using a VPN, you can ignore this message.</value>
+    <comment>v1.0.9</comment>
+  </data>
+  <data name="DialogWifiIsOffHeadline" xml:space="preserve">
+    <value>Wifi is off</value>
+    <comment>v1.0.9</comment>
+  </data>
+  <data name="DisableBackgroundMode" xml:space="preserve">
+    <value>Disable background mode?</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="DisableForegroundService" xml:space="preserve">
+    <value>Disable foreground service?</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="DisagreePersonalizedAds" xml:space="preserve">
+    <value>Non-personalized ads</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="DoFullBackup" xml:space="preserve">
+    <value>Do full backup?</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EditAndSave" xml:space="preserve">
+    <value>Edit &amp; Save</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="EnableBackgroundMode" xml:space="preserve">
+    <value>Enable background mode?</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="EnableForegroundService" xml:space="preserve">
+    <value>Enable foreground service?</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="EnableProxy" xml:space="preserve">
+    <value>Enable proxy</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="EnableWebCam" xml:space="preserve">
+    <value>Enable webcam</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="ErrorDeviceTypeNotRecognizedFormated" xml:space="preserve">
+    <value>The device type couldn't be detected accurately. Type detected was '{0}'</value>
+    <comment>v1.0.12</comment>
+  </data>
+  <data name="Error_AccessTokenIsInvalid" xml:space="preserve">
+    <value>API key is invalid!</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="EventConnectionClosedFormated" xml:space="preserve">
+    <value>The connection to '{0}' was closed or lost</value>
+    <comment>v1.0.17</comment>
+  </data>
+  <data name="EventConnectionStillAliveFormated" xml:space="preserve">
+    <value>The connection to '{0}' is still alive</value>
+    <comment>v1.0.17</comment>
+  </data>
+  <data name="EventConnectivityChanged" xml:space="preserve">
+    <value>The connectivity of the device has changed</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EventDurationForTaskInMilliSeconds" xml:space="preserve">
+    <value>Task '{0}' finished in '{1}' ms</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="EventDurationForTaskInSeconds" xml:space="preserve">
+    <value>Task '{0}' finished in '{1}' seconds</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="EventManager" xml:space="preserve">
+    <value>Event manager</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="EventTimerCancellationRequestedByApp" xml:space="preserve">
+    <value>App requested timer to be cancelled</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EventTimerCanclledByApp" xml:space="preserve">
+    <value>Timer was canclled by the app</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EventTimerHasStopped" xml:space="preserve">
+    <value>Timer has stopped working</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EventTimerRequestedToRestart" xml:space="preserve">
+    <value>Timer requested to restart</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EventTimerStoppedBecauseServerWasOfflineAfterFormated" xml:space="preserve">
+    <value>Timer was stopped because the server was offline after trying '{0}' time(s) to reconnect.</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="EventWifiTurnedOffCheckingIfConnectionIsStillValid" xml:space="preserve">
+    <value>Wifi turned off or lost connection, checking if connection is still alive (via VPN for instance)</value>
+    <comment>v1.0.17</comment>
+  </data>
+  <data name="ExpandWebCamOnLandscapeMode" xml:space="preserve">
+    <value>Fullscreen for webcam on landscape mode</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="Extruder" xml:space="preserve">
+    <value>Extruder</value>
+  </data>
+  <data name="ExtruderNotAvailableDots" xml:space="preserve">
+    <value>Extruder not available...</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="Fan" xml:space="preserve">
+    <value>Fan</value>
+  </data>
+  <data name="FeatureDisabledDuringBeta" xml:space="preserve">
+    <value>Feature is disabled in beta</value>
+  </data>
+  <data name="FeatureNotAvailableInThisVersion" xml:space="preserve">
+    <value>This feature is in progress and will be available with an upcoming version of this app.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="FileCachingTimeInMs" xml:space="preserve">
+    <value>File Caching Time (ms)</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Filtering" xml:space="preserve">
+    <value>Filtering</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="FilterModelGroups" xml:space="preserve">
+    <value>MODEL GROUPS</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="FilterSublineCurrentPath" xml:space="preserve">
+    <value>CURRENT PATH</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="FilterSublineFileLocation" xml:space="preserve">
+    <value>FILE LOCATIONS</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="FilterSublineSearchText" xml:space="preserve">
+    <value>SEARCH TEXT</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Flow" xml:space="preserve">
+    <value>Flow</value>
+  </data>
+  <data name="Folder" xml:space="preserve">
+    <value>Folder</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="ForegroundServiceActive" xml:space="preserve">
+    <value>The app is still active and keeps up the connectiont o your Server.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ForegroundServicePrintActiveFormated" xml:space="preserve">
+    <value>Current print job '{0}' has completed {1} from {2}%...</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="FoundElementsForRestoring" xml:space="preserve">
+    <value>Elements found for restoring</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="GcodeAfterPrinterConnected" xml:space="preserve">
+    <value>After printer connected</value>
+  </data>
+  <data name="GcodeAfterPrintJobCancelled" xml:space="preserve">
+    <value>After job cancelled</value>
+  </data>
+  <data name="GcodeAfterPrintJobCompleted" xml:space="preserve">
+    <value>After job completed</value>
+  </data>
+  <data name="GcodeAfterPrintJobPaused" xml:space="preserve">
+    <value>After job paused</value>
+  </data>
+  <data name="GcodeAfterPrintJobResumed" xml:space="preserve">
+    <value>After job resumed</value>
+  </data>
+  <data name="GcodeAfterToolChange" xml:space="preserve">
+    <value>After tool change</value>
+  </data>
+  <data name="GcodeBeforePrinterDisconnected" xml:space="preserve">
+    <value>Before printer disconnected</value>
+  </data>
+  <data name="GcodeBeforePrintJobResumed" xml:space="preserve">
+    <value>Before job resumed</value>
+  </data>
+  <data name="GcodeBeforePrintJobStarts" xml:space="preserve">
+    <value>Before job starts</value>
+  </data>
+  <data name="GcodeBeforeToolChange" xml:space="preserve">
+    <value>Before tool change</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="GoBack" xml:space="preserve">
+    <value>Go back</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="GoOneDirectoryBack" xml:space="preserve">
+    <value>One directory back</value>
+  </data>
+  <data name="GoProNow" xml:space="preserve">
+    <value>Go pro now!</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="GPIOPin" xml:space="preserve">
+    <value>GPIO pin</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="GPIOPins" xml:space="preserve">
+    <value>GPIO Pins</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineAboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="HeadlineAdditionalPrintServerFunctions" xml:space="preserve">
+    <value>Additional Print Server Functions</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="HeadlineAdjustYourPrivacySettings" xml:space="preserve">
+    <value>Adjust Your Privacy Settings</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineAdsSettings" xml:space="preserve">
+    <value>Ads Settings</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineAdsSetup" xml:space="preserve">
+    <value>Ads Setup</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="HeadlineAppTrackingTransparency" xml:space="preserve">
+    <value>App Tracking Transparency</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineCardViews" xml:space="preserve">
+    <value>Card Views</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineConnectionSettings" xml:space="preserve">
+    <value>Connection Settings</value>
+  </data>
+  <data name="HeadlineCrashAnalytics" xml:space="preserve">
+    <value>Crash Analytics</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineCurrentPosition" xml:space="preserve">
+    <value>Current Position</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="HeadlineCurrentPrint" xml:space="preserve">
+    <value>Current Print</value>
+  </data>
+  <data name="HeadlineDemoMode" xml:space="preserve">
+    <value>Demo Mode</value>
+  </data>
+  <data name="HeadlineErrors" xml:space="preserve">
+    <value>Errors</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="HeadlineEventManager" xml:space="preserve">
+    <value>Event Manager</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="HeadlineFilter" xml:space="preserve">
+    <value>Filter</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HeadlineGcodeScripts" xml:space="preserve">
+    <value>Gcode Sctipts</value>
+  </data>
+  <data name="HeadlineGeneral" xml:space="preserve">
+    <value>General</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineHelpAndDocs" xml:space="preserve">
+    <value>Help &amp; Documentation</value>
+  </data>
+  <data name="HeadlineLegalNote" xml:space="preserve">
+    <value>Legal Note</value>
+  </data>
+  <data name="HeadlineLimits" xml:space="preserve">
+    <value>Limits</value>
+  </data>
+  <data name="HeadlineLogin" xml:space="preserve">
+    <value>Login</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineLookAndFeel" xml:space="preserve">
+    <value>Look and Feel</value>
+  </data>
+  <data name="HeadlineMainThemeColor" xml:space="preserve">
+    <value>Main Theme Color</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineMessages" xml:space="preserve">
+    <value>Messages</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HeadlineNotifications" xml:space="preserve">
+    <value>Notifications</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="HeadlineOffline" xml:space="preserve">
+    <value>Server not reachable :(</value>
+  </data>
+  <data name="HeadlineOverview" xml:space="preserve">
+    <value>Overview</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlinePermissions" xml:space="preserve">
+    <value>Permissions</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HeadlinePrinterControl" xml:space="preserve">
+    <value>Printer Control</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="HeadlinePrinterShape" xml:space="preserve">
+    <value>Printer Shape</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="HeadlineProFeatures" xml:space="preserve">
+    <value>Pro Features</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineProjectOverview" xml:space="preserve">
+    <value>Project Overview</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineProxy" xml:space="preserve">
+    <value>Proxy</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="HeadlineQuickAccess" xml:space="preserve">
+    <value>Quick Access</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HeadlineSelectFromDefaultColors" xml:space="preserve">
+    <value>Select From Default Colors</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineSelectPrinter" xml:space="preserve">
+    <value>Select Printer</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HeadlineSelectServer" xml:space="preserve">
+    <value>Select Server</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="HeadlineSelectThemeColor" xml:space="preserve">
+    <value>Select Theme Color</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineServers" xml:space="preserve">
+    <value>Servers</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="HeadlineServerState" xml:space="preserve">
+    <value>Server State</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineSetupProxy" xml:space="preserve">
+    <value>Setup Proxy</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="HeadlineTimer" xml:space="preserve">
+    <value>Timer</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineUpdate" xml:space="preserve">
+    <value>Update</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="HeadlineUsedThirdPartySoftwarePackages" xml:space="preserve">
+    <value>Used Thirdparty Packages</value>
+  </data>
+  <data name="HeadlineUsedThirdPartySoftwareResources" xml:space="preserve">
+    <value>Used Thirdparty Resources</value>
+  </data>
+  <data name="HeadlineVersionDetails" xml:space="preserve">
+    <value>Version Details</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="HeadlineWebActions" xml:space="preserve">
+    <value>Web Actions</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="HeadlineWebSocketConnection" xml:space="preserve">
+    <value>WebSocket Connection</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineWelcome" xml:space="preserve">
+    <value>Welcome!</value>
+  </data>
+  <data name="HeadlineYourLicense" xml:space="preserve">
+    <value>Your License</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="HeatedBed" xml:space="preserve">
+    <value>Heated Bed</value>
+  </data>
+  <data name="HeatedChamber" xml:space="preserve">
+    <value>Heated Chamber</value>
+  </data>
+  <data name="HeatingDots" xml:space="preserve">
+    <value>Heating...</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="HistoryNotLoadedOrNotAvailableDots" xml:space="preserve">
+    <value>History not loaded or not available...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeAllAxises" xml:space="preserve">
+    <value>Home all axes</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HomeXAndYAxis" xml:space="preserve">
+    <value>Home X and Y axes</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HomeXAxis" xml:space="preserve">
+    <value>Home X axis</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HomeYAxis" xml:space="preserve">
+    <value>Home Y axis</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="HomeZAxis" xml:space="preserve">
+    <value>Home Z axis</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>Idle</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="IdleDetectionThreshold" xml:space="preserve">
+    <value>Idle detection threshold</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="IgnoreWarningIfVpnIsActive" xml:space="preserve">
+    <value>Note: You can ignore this warning if you are connected via a VPN to your local network instead.</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="ImageOnlyAvailableDuringPrintDots" xml:space="preserve">
+    <value>Image only available during print...</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="IncludeInBackup" xml:space="preserve">
+    <value>Include in backup</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="InfoLoadInBackgroundTask" xml:space="preserve">
+    <value>The app will load the needed information in a background task. This improves the overall loading time, however leads to unloaded elements on startup.</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="InfoOverrideValidationRules" xml:space="preserve">
+    <value>Sometimes the validation rules false negative. If you are absolutely sure that your provided inputs are valid, activate this option to proceed anyway.</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>In progress</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="IntroChangelog" xml:space="preserve">
+    <value>Thank you for updating to the latest version of our app. Please see what's new below.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>Introduction</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="IsBackingUpDots" xml:space="preserve">
+    <value>Is backing up...</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="IsLoadingDots" xml:space="preserve">
+    <value>Is loading...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="IsRefreshingOnlineStatesDots" xml:space="preserve">
+    <value>Is refreshing online states, please wait...</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="IsSavingConfiguration" xml:space="preserve">
+    <value>Is saving config...</value>
+  </data>
+  <data name="IsSynchronizingDots" xml:space="preserve">
+    <value>Is synchronizing...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="IsTryingToConnect" xml:space="preserve">
+    <value>Trying to connect...</value>
+  </data>
+  <data name="IsTryingToLoginDots" xml:space="preserve">
+    <value>Tries to login...</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="LabelAdjustExtruderTemp" xml:space="preserve">
+    <value>Adjust extruder temperature:</value>
+  </data>
+  <data name="LabelAdjustFanSpeed" xml:space="preserve">
+    <value>Adjust fan speed:</value>
+  </data>
+  <data name="LabelAdjustFlow" xml:space="preserve">
+    <value>Adjust material flow:</value>
+  </data>
+  <data name="LabelAdjustHeadedBedTemp" xml:space="preserve">
+    <value>Adjust heated bed temperature:</value>
+  </data>
+  <data name="LabelAdjustHeadedChamberTemp" xml:space="preserve">
+    <value>Adjust heated chamber temperature:</value>
+  </data>
+  <data name="LabelAdjustPrinterSpeed" xml:space="preserve">
+    <value>Adjust printer speed:</value>
+  </data>
+  <data name="LabelAnalysed" xml:space="preserve">
+    <value>Analysed:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelAveragePrintTime" xml:space="preserve">
+    <value>Average print time</value>
+    <comment>v1.0.21</comment>
+  </data>
+  <data name="LabelBaudrate" xml:space="preserve">
+    <value>Baudrate:</value>
+  </data>
+  <data name="LabelCurrentPath" xml:space="preserve">
+    <value>Path:</value>
+  </data>
+  <data name="LabelDimensions" xml:space="preserve">
+    <value>Dimensions:</value>
+    <comment>v1.0.21</comment>
+  </data>
+  <data name="LabelEstimatedPrintTime" xml:space="preserve">
+    <value>Estitmated print time:</value>
+    <comment>v1.0.21</comment>
+  </data>
+  <data name="LabelFilamentLengthTotal" xml:space="preserve">
+    <value>Total filament length:</value>
+    <comment>v1.0.21</comment>
+  </data>
+  <data name="LabelFilamentTotal" xml:space="preserve">
+    <value>Total filament:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelFilamentVolumeTotal" xml:space="preserve">
+    <value>Total filament volume:</value>
+    <comment>v1.0.21</comment>
+  </data>
+  <data name="LabelLastPrintTime" xml:space="preserve">
+    <value>Last print time:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelLayer" xml:space="preserve">
+    <value>Layer:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelLinesSent" xml:space="preserve">
+    <value>Line sent:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelMax" xml:space="preserve">
+    <value>Max:</value>
+  </data>
+  <data name="LabelMin" xml:space="preserve">
+    <value>Min:</value>
+  </data>
+  <data name="LabelName" xml:space="preserve">
+    <value>Name:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelPort" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="LabelPrinted" xml:space="preserve">
+    <value>Printed:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelPrintTime" xml:space="preserve">
+    <value>Print time:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelProfile" xml:space="preserve">
+    <value>Profile:</value>
+  </data>
+  <data name="LabelProgress" xml:space="preserve">
+    <value>Progress:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelSlicer" xml:space="preserve">
+    <value>Slicer:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LabelToggleFan" xml:space="preserve">
+    <value>Toggle fan:</value>
+  </data>
+  <data name="LabelTotal" xml:space="preserve">
+    <value>Total:</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="LabelVolumeTotal" xml:space="preserve">
+    <value>Total volume:</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="LastBackup" xml:space="preserve">
+    <value>Last backup</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="LegalNoteOctoprint" xml:space="preserve">
+    <value>This is not an official software of Octoprint or associated in anyway with Octoprint or Gina Häußge. It just includes the OctoPrint API in order to interact with your OctoPrint server.</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>License</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="LicenseInvalid" xml:space="preserve">
+    <value>License invalid...</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="LicenseNone" xml:space="preserve">
+    <value>No license found</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="LicenseStatus" xml:space="preserve">
+    <value>License status</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="LicenseValidAndActive" xml:space="preserve">
+    <value>License valid &amp; active!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="LoadingDots" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="LoadModelImagesInBackgroundTask" xml:space="preserve">
+    <value>Load model images in background task?</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="LoadModelImagesInFileLists" xml:space="preserve">
+    <value>Load model images in the file list?</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="LoadRenederedImagesInsteadOfThumbnailForModels" xml:space="preserve">
+    <value>Load rendered images instead of thumbnails for models?</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Local</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="MicrosoftAppCenter" xml:space="preserve">
+    <value>AppCenter (Microsoft)</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ModelDetails" xml:space="preserve">
+    <value>Model details</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="NetworkBufferTimeInMs" xml:space="preserve">
+    <value>Network Buffer Time (ms)</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Never</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>New folder</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="NoActivePrintJobDots" xml:space="preserve">
+    <value>No job active...</value>
+  </data>
+  <data name="NoCommentsFoundDots" xml:space="preserve">
+    <value>No comments found...</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="NoErrorsOccurredSinceTheLastClearingDots" xml:space="preserve">
+    <value>No errors occurred since the last clearing...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="NoFAQAvailableAtTheMoment" xml:space="preserve">
+    <value>No FAQ available at the moment.</value>
+  </data>
+  <data name="NoFilesOrFolderInThisDirectoryFound" xml:space="preserve">
+    <value>No files or folders have been found in this directory / location.</value>
+  </data>
+  <data name="NoGPIOPinsAvailableDots" xml:space="preserve">
+    <value>No GPIO pins available...</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="NoItemsAvailableDots" xml:space="preserve">
+    <value>No items available...</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="NoItemsFoundPleaseCheckYourConnectionSettingsDots" xml:space="preserve">
+    <value>No items have been found. Please check your connection settings. This can be caused by an invalid api key...</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="NoMessagesFoundDot" xml:space="preserve">
+    <value>No messages found...</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="NoPrintersFoundDot" xml:space="preserve">
+    <value>No printers found...</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="NoPrintersFoundOrServerOfflineDots" xml:space="preserve">
+    <value>No printers found or server is offline...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="NoPrintJobRunning" xml:space="preserve">
+    <value>No print job running at the moment</value>
+  </data>
+  <data name="NoProjectsFoundDots" xml:space="preserve">
+    <value>No projects found...</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="NoServersAvailableDots" xml:space="preserve">
+    <value>No servers available...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="NotAvailableDuringPrintDots" xml:space="preserve">
+    <value>Not available during print...</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="NoteAnalyticsData" xml:space="preserve">
+    <value>This will allow the app to anonymously track the user behaviour during the usage of the app. This helps to improve the overall look and feel of the app.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteAppleAppTrackingTransparency" xml:space="preserve">
+    <value>This option can only be set once and will be remembered until you reinstall the application.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteAppleAppTrackingTransparencyApproved" xml:space="preserve">
+    <value>Thanks! You're helping with your choice to make this app better and help fixing bugs much faster.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteAppleAppTrackingTransparencyNotSetOrNotApprovedYet" xml:space="preserve">
+    <value>App tracking on iOS is not allowed or hasn't been set, yet! If latter, you will be asked on closing of this page or if you set your first coice. If you disallow the app tracking all approved choices above have no effect. Please also note, that the decision whether to allow app tracking can only be done once. In order to change your selection, you would need to re-install this application.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteBackgroundMode" xml:space="preserve">
+    <value>If this mode is active, the app continues to run in the background. Whilst in background mode, the app maintains a connection to your server and updates the states reguraly. You can adjust the refresh time if you want a higher or lower refresh rate.</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="NoteBackupFileiOS" xml:space="preserve">
+    <value>Don't forget to save the backup file after it had been created. You either can save it to your iCloud or local "Files". Otherwise, the backup file will be deleted if the app is deleted!</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteCardViewsForModels" xml:space="preserve">
+    <value>This load the rendered image instead of the thumbnail and will increase the loading time for the files.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="NoteCrashAnalyticData" xml:space="preserve">
+    <value>This will allow the app to send anonymous crash reports to Microsoft AppCenter and helps to find and fix bugs much faster.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteCredentials" xml:space="preserve">
+    <value>Please note, the credentials will not be saved in the app or on your device. They only will be used to configure the app by fetching your api key.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="NoteForegroundMode" xml:space="preserve">
+    <value>If this mode is active, the app continues to run in the background. Whilst in background mode, the app maintains a connection to your server and updates the states reguraly. You will see a notifiaction, showing either the print progress (if printing) or an idle message. You can adjust the refresh time if you want a higher or lower refresh rate.</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="NoteForShowingAds" xml:space="preserve">
+    <value>Showing ads keeps the development of this app alive. If you don't want any ads to be displayed in the app, you can upgrade to the pro version of it. The pro version is also available in the corresponding app store.</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="NoteFullBackup" xml:space="preserve">
+    <value>Performs a full backup of all your data and settings</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="NoteIdleDetectionThreshold" xml:space="preserve">
+    <value>This value specifies the retries till the app closes automatically whilst in background mode and inactive print. The time till closing is calculated by the idle detection threshold multiplied with the update interval.</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="NoteIfNoPropertyIsSelectedAllWillBeShown" xml:space="preserve">
+    <value>Note, if no property is selected all items with those properties will be shown.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="NoteLegalNoteRepetierServerPro" xml:space="preserve">
+    <value>This app neither an official app nor is not associated with Repetier Server Pro or its owner. This app is a community project using the Repetier Server REST-API to interact with your server.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="NoteLoginToYourRepetierServer" xml:space="preserve">
+    <value>Please login with your server credentials. The app will then try to configure itself automatically.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="NotePersonalizedAds" xml:space="preserve">
+    <value>This will allow the app to show personalised ads to you provided by Google AdMob. Ads will then be more optimized to your interests.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NoteProblemsResolingLocalAdderssName" xml:space="preserve">
+    <value>Some devices have troubles resolving the default local web name 'repetier-server.local'. In this case use a static IP address. Please check our docs for more information.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="NoteProOnlyFeature" xml:space="preserve">
+    <value>This is a pro feature. To get access to it, please use the pro version which is also available in the app store.</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="NoteRestoreContent" xml:space="preserve">
+    <value>Please note, that all existing data for the selected sections will be overwritten!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="NoteServiceNotAvailableInDemoMode" xml:space="preserve">
+    <value>This service is not available in the demo mode. Please deactivate the demo mode first to access the content of this page.</value>
+  </data>
+  <data name="NoteSettingsAppliedAfterRestart" xml:space="preserve">
+    <value>The change of the current setting needs the app to be restarted first to take effect.</value>
+  </data>
+  <data name="NoteUsedServices" xml:space="preserve">
+    <value>Here you see a list of used and not used services. For all used services we linked the privacy policy.</value>
+  </data>
+  <data name="NoteWebCamIsDisabledInSettings" xml:space="preserve">
+    <value>The webcam feature is currently disabled at your print server settings.</value>
+  </data>
+  <data name="NoteWebCamNotAvailableInDemoMode" xml:space="preserve">
+    <value>Please note that the WebCam is not available in the demo mode.</value>
+  </data>
+  <data name="Note_VersionIsBeta" xml:space="preserve">
+    <value>Please note that the currently installed build is a beta version. This means that it can be unstable and include minor bugs. Please report back if you encountered any problems.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="NotificationNewMessageFormatedContent" xml:space="preserve">
+    <value>You've received a new message from your printer '{0}'.</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="NotificationNewMessageHeadline" xml:space="preserve">
+    <value>New message!</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="NotificationPrintJobFinishedFormatedContent" xml:space="preserve">
+    <value>The print job from your printer '{0}' is done!</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="NotificationPrintJobFinishedHeadline" xml:space="preserve">
+    <value>Print job finished!</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="NotificationServerOfflineOrConnectionLostFormatedContent" xml:space="preserve">
+    <value>The server went offline or the connection was lost to '{0}'</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="NotificationServerUpdateAvailableFormatedContent" xml:space="preserve">
+    <value>For your Repetier Server '{0}' is an update available!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="NotificationServerUpdateAvailableHeadline" xml:space="preserve">
+    <value>Server update available!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="NotificationWebSocketErrorFormatedContent" xml:space="preserve">
+    <value>A websocket error has occurred: {0}</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="NoWebActionFoundDots" xml:space="preserve">
+    <value>No web action found...</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="OpenDocumentationLink" xml:space="preserve">
+    <value>Open documentation (url)</value>
+  </data>
+  <data name="OpenHelpPageLink" xml:space="preserve">
+    <value>Open help page (url)</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="OverrideValidationRules" xml:space="preserve">
+    <value>Override validation rules?</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overwrite</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="PasswordInvalidMinLengthNotReached" xml:space="preserve">
+    <value>Password invalid, min. length is</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="PdfFile" xml:space="preserve">
+    <value>pdf file</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="PermissionCamera" xml:space="preserve">
+    <value>Use of camera</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="PermissionCameraReason" xml:space="preserve">
+    <value>Is used to scan bar codes</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="PermissionNetworkState" xml:space="preserve">
+    <value>Check network state</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="PermissionNetworkStateReason" xml:space="preserve">
+    <value>Is used to see if the device is online</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="PermissionWriteStorage" xml:space="preserve">
+    <value>Write to device storage</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="PermissionWriteStorageReason" xml:space="preserve">
+    <value>Needed to export the calculation report as pdf file</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Printer</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="PrinterOfflineDots" xml:space="preserve">
+    <value>Printer is offline...</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="Printers" xml:space="preserve">
+    <value>Printers</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="PrintJobDetails" xml:space="preserve">
+    <value>Pint job details</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="PrintJobs" xml:space="preserve">
+    <value>Print Jobs</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="PrintServerIsConnectingDots" xml:space="preserve">
+    <value>Print server is connecting...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="PrintServerIsOffline" xml:space="preserve">
+    <value>Print server is offline</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="PrintServerIsOnline" xml:space="preserve">
+    <value>Print server is online</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="PrintServerOnlineButAuthenticationFailed" xml:space="preserve">
+    <value>Print server is online, however the API key seems invalid (auth error)</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="PrivacyPolicyIntroduction" xml:space="preserve">
+    <value>Your personal information is a valuable good. Therefore we neither use any service or software to track your behavior, nor we perform any communication over the internet out of this app. This app belongs to you, so do your data. For more information please read our complete privacy policy linked below.</value>
+  </data>
+  <data name="ProceedWithThisSettingsAnyway" xml:space="preserve">
+    <value>Proceed anyway</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="ProjectOverviewFormatedIntroduction" xml:space="preserve">
+    <value>This project is maintend on {0}. If you want to view the project and additional information to it, please visit the project page below. If you want to submit an issue or a feature request,  please use the corresponding buttons to do so.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ProjectOverviewGitHubIntroduction" xml:space="preserve">
+    <value>This project is maintend on GitHub. If you want to view the project and additional information to it, please visit the project page below. If you want to submit an issue or a feature request,  please use the corresponding buttons to do so.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projects</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ProVersion" xml:space="preserve">
+    <value>Pro Version</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ProVersionAccessYourProjects" xml:space="preserve">
+    <value>Access your projects</value>
+    <comment>v1.0.7</comment>
+  </data>
+  <data name="ProVersionFeatureAndManyMoreDots" xml:space="preserve">
+    <value>And many more...</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ProVersionFeatureNoAds" xml:space="preserve">
+    <value>No ads</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ProVersionIntroductionText" xml:space="preserve">
+    <value>Unlock the full potential of our app by upgrading to the pro version today! You find some of the pro benefits listed below.</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ProVersionSingleControlPanel" xml:space="preserve">
+    <value>Get access to the Single Control Panel</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="ProxyPassword" xml:space="preserve">
+    <value>Password (proxy)</value>
+  </data>
+  <data name="ProxyUserName" xml:space="preserve">
+    <value>Username (proxy)</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="PushNotificationsNote" xml:space="preserve">
+    <value>To receive notifiactions, the server needs to be connected to the websocket. On iOS, when the app is sent to the background, the connection will be killed by the OS after short time. We're working on a better solution for this.</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="QuickSetup" xml:space="preserve">
+    <value>Quick Setup</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ReadPrivacyPolicy" xml:space="preserve">
+    <value>Read Privacy Policy</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>Reload</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="RepetierServerPro" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ResourceModified" xml:space="preserve">
+    <value>Modified</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ResourceOriginalState" xml:space="preserve">
+    <value>No changes</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+  <data name="RestApiErrorWarning" xml:space="preserve">
+    <value>There was an error while communicating with the rest api of your server. Click to get more details.</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Restart</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="RestoreAll" xml:space="preserve">
+    <value>Restore all</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="RestoreSettings" xml:space="preserve">
+    <value>Restore settings</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="Restoring" xml:space="preserve">
+    <value>Restoring</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="RotateAngleWebCamView" xml:space="preserve">
+    <value>Rotate angle:</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="SdCard" xml:space="preserve">
+    <value>SD Card</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SearchingForUpdatesDots" xml:space="preserve">
+    <value>Searching for updates...</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="SecureConnectionSSL" xml:space="preserve">
+    <value>Secure connection (SSL)</value>
+  </data>
+  <data name="SelectBackupFile" xml:space="preserve">
+    <value>Select backup file</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="Server" xml:space="preserve">
+    <value>Server</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ServerAddressOrIp" xml:space="preserve">
+    <value>Server address / IP</value>
+  </data>
+  <data name="ServerPort" xml:space="preserve">
+    <value>Port</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SetActive" xml:space="preserve">
+    <value>Set active</value>
+    <comment>v1.0.8</comment>
+  </data>
+  <data name="SetConnectionState" xml:space="preserve">
+    <value>Set connection state</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsBackgroundMode" xml:space="preserve">
+    <value>Background Mode</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="SettingsBackupPassword" xml:space="preserve">
+    <value>Password for encryption</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="SettingsChangeDefaultWebCamSettings" xml:space="preserve">
+    <value>Change default WebCam settings</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsCustomWebCamSettings" xml:space="preserve">
+    <value>Custom WebCam Settings</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsDefaultWebCamSettings" xml:space="preserve">
+    <value>Default WebCam Settings</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsDemoMode" xml:space="preserve">
+    <value>DEMO MODE</value>
+  </data>
+  <data name="SettingsEnhancedWebCamSettings" xml:space="preserve">
+    <value>Enhanced webcam settings</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsForegroundService" xml:space="preserve">
+    <value>Foreground Service</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="SettingsPrinter" xml:space="preserve">
+    <value>Printer</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsPrintServerAdditionalFunctions" xml:space="preserve">
+    <value>Additional print server functions</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="SettingsPrintServerConnection" xml:space="preserve">
+    <value>Connection Settings</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerConnectionAddress" xml:space="preserve">
+    <value>Web address or IP address</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerConnectionApi" xml:space="preserve">
+    <value>API key</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerConnectionPort" xml:space="preserve">
+    <value>Port</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerConnectionRefreshInterval" xml:space="preserve">
+    <value>Refresh interval (seconds)</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerConnectionUseSSL" xml:space="preserve">
+    <value>Use secure connection (https://)?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerEmergencyStop" xml:space="preserve">
+    <value>Emergency Stop</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="SettingsPrintServerEmergencyStopEnableSecurityQuestions" xml:space="preserve">
+    <value>Enable security question before emergeny stop?</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="SettingsPrintServers" xml:space="preserve">
+    <value>Print Servers</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsPrintServerShowEmergencyStop" xml:space="preserve">
+    <value>Show emergency stop button?</value>
+    <comment>v1.1.0</comment>
+  </data>
+  <data name="SettingsSelectPrinter" xml:space="preserve">
+    <value>Select printer</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsSelectWebCams" xml:space="preserve">
+    <value>Select the webcam(s)</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsTabAds" xml:space="preserve">
+    <value>ADS</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="SettingsTabAdsSetup" xml:space="preserve">
+    <value>Setup ad displaying</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="SettingsTabAdsShowBannerAdTopPosition" xml:space="preserve">
+    <value>Show banner ad at top?</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="SettingsTabAppLanguages" xml:space="preserve">
+    <value>Change language</value>
+  </data>
+  <data name="SettingsTabAppLanguagesSelectedLanguage" xml:space="preserve">
+    <value>Selected language</value>
+  </data>
+  <data name="SettingsTabAppLookAndFeel" xml:space="preserve">
+    <value>Edit Look and Feel</value>
+  </data>
+  <data name="SettingsTabBackup" xml:space="preserve">
+    <value>Backup</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="SettingsTabDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabDashboardShowImage" xml:space="preserve">
+    <value>Show image in header</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabDemoMode" xml:space="preserve">
+    <value>Customize demo mode</value>
+  </data>
+  <data name="SettingsTabHeadlineBackup" xml:space="preserve">
+    <value>BACKUP</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="SettingsTabLanguage" xml:space="preserve">
+    <value>LANGUAGE</value>
+  </data>
+  <data name="SettingsTabLookAndFeelCollapseTopViewIfNotPrinting" xml:space="preserve">
+    <value>Collapse top view if not printing?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsTabLookAndFeelGauge" xml:space="preserve">
+    <value>GAUGE</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabLookAndFeelGaugeHeight" xml:space="preserve">
+    <value>Height</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabLookAndFeelGaugeHeightWhilePrinting" xml:space="preserve">
+    <value>Height while printing</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabLookAndFeelHideProgressBarInTopView" xml:space="preserve">
+    <value>Hide progress bar in top view?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="SettingsTabNeededPermissions" xml:space="preserve">
+    <value>Needed Permissions</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabNotifications" xml:space="preserve">
+    <value>NOTIFICATIONS</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="SettingsTabNotificationsManage" xml:space="preserve">
+    <value>Manage notifications</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="SettingsTabNotificationsNotifyOnJobDone" xml:space="preserve">
+    <value>Notify when job is done?</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="SettingsTabNotificationsNotifyOnNewMessage" xml:space="preserve">
+    <value>Notify on new messages?</value>
+    <comment>v1.0.10</comment>
+  </data>
+  <data name="SettingsTabNotificationsNotifyOnServerOffline" xml:space="preserve">
+    <value>Notify on server lost connection?</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsTabNotificationsNotifyOnWebSocketError" xml:space="preserve">
+    <value>Notify on websocket errors?</value>
+    <comment>v1.0.19</comment>
+  </data>
+  <data name="SettingsTabOctoPrintEditConnection" xml:space="preserve">
+    <value>Edit Connection</value>
+  </data>
+  <data name="SettingsTabOctoPrintEditLimits" xml:space="preserve">
+    <value>Edit default limits</value>
+  </data>
+  <data name="SettingsTabOctoPrintGcodeScripts" xml:space="preserve">
+    <value>Gcode scripts</value>
+  </data>
+  <data name="SettingsTabOctoPrintGcodeScriptsTagline" xml:space="preserve">
+    <value>Edit event based gcode scripts</value>
+  </data>
+  <data name="SettingsTabOctoPrintLimitsExtruder" xml:space="preserve">
+    <value>Boundaries for extruder(s)</value>
+  </data>
+  <data name="SettingsTabOctoPrintLimitsFlow" xml:space="preserve">
+    <value>Boundaries for material flow</value>
+  </data>
+  <data name="SettingsTabOctoPrintLimitsHeatedBed" xml:space="preserve">
+    <value>Boundaries for heated bed</value>
+  </data>
+  <data name="SettingsTabOctoPrintLimitsHeatedChamber" xml:space="preserve">
+    <value>Boundaries for heated chamber</value>
+  </data>
+  <data name="SettingsTabOctoPrintLimitsSpeed" xml:space="preserve">
+    <value>Boundaries for printer speed</value>
+  </data>
+  <data name="SettingsTabOctoPrintManagePrinterProfiles" xml:space="preserve">
+    <value>Manage Printer Profiles</value>
+  </data>
+  <data name="SettingsTabOctoPrintSetupWebCam" xml:space="preserve">
+    <value>Setup WebCam</value>
+  </data>
+  <data name="SettingsTabPermissions" xml:space="preserve">
+    <value>Manage permissions</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabPrintServer" xml:space="preserve">
+    <value>Print Server</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="SettingsTabRefreshing" xml:space="preserve">
+    <value>REFRESHING</value>
+  </data>
+  <data name="SettingsTabRefreshOnAppearing" xml:space="preserve">
+    <value>Refresh data on each appearing</value>
+  </data>
+  <data name="SettingsTabRestore" xml:space="preserve">
+    <value>Restore</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="SettingsTabsAdsShowPersonalizedAds" xml:space="preserve">
+    <value>Show personalized ads?</value>
+    <comment>v1.0.6</comment>
+  </data>
+  <data name="SettingsTabSupport" xml:space="preserve">
+    <value>SUPPORT</value>
+  </data>
+  <data name="SettingsTabSupportFAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="SettingsTabSupportHelpAndDocs" xml:space="preserve">
+    <value>Help &amp; Documentation</value>
+  </data>
+  <data name="SettingsTabSupportTermsOfUse" xml:space="preserve">
+    <value>Terms of use</value>
+  </data>
+  <data name="SettingsTabThemes" xml:space="preserve">
+    <value>THEMES</value>
+  </data>
+  <data name="SettingsTabThemesDarkmode" xml:space="preserve">
+    <value>Darkmode</value>
+  </data>
+  <data name="SettingsTabThemesUseDeviceSettings" xml:space="preserve">
+    <value>Use Device Settings</value>
+  </data>
+  <data name="SettingsTabTitleView" xml:space="preserve">
+    <value>TITLE VIEW</value>
+  </data>
+  <data name="SettingsTabTitleViewProgressInTitleView" xml:space="preserve">
+    <value>Print progress in title</value>
+  </data>
+  <data name="SettingsTabTitleViewRemainingPrintTimeInTitleView" xml:space="preserve">
+    <value>Show remaining print time in the title view</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="SettingsTabWebCamSetFullscreenLandscapeMode" xml:space="preserve">
+    <value>Set webcam fullscreen (landscape)</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="SettingsTapApp" xml:space="preserve">
+    <value>APP</value>
+  </data>
+  <data name="ShowAllFiles" xml:space="preserve">
+    <value>Show all files</value>
+  </data>
+  <data name="ShowBigView" xml:space="preserve">
+    <value>Show big view</value>
+  </data>
+  <data name="ShowHistoryForAllPrinters" xml:space="preserve">
+    <value>Show history for all printers?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="ShowMore" xml:space="preserve">
+    <value>Show more</value>
+  </data>
+  <data name="ShowOnlyFilesFromCurrentFilePath" xml:space="preserve">
+    <value>Show only files from current path</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="ShowWebSocketDataLogger" xml:space="preserve">
+    <value>Show WebSocket data logger</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="SimulateDoubleExtruder" xml:space="preserve">
+    <value>Simulate double extruder</value>
+  </data>
+  <data name="SimulateHeatedBed" xml:space="preserve">
+    <value>Simulate heated bed</value>
+  </data>
+  <data name="SimulateHeatedChamber" xml:space="preserve">
+    <value>Simulate heated chamber</value>
+  </data>
+  <data name="SimulatePrint" xml:space="preserve">
+    <value>Simulate active print</value>
+  </data>
+  <data name="Slug" xml:space="preserve">
+    <value>Slug</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sort</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Sorting" xml:space="preserve">
+    <value>Sorting</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="StartTypingDots" xml:space="preserve">
+    <value>Start typing here...</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="StopBackgroundMode" xml:space="preserve">
+    <value>Stop background mode</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="SubmitFeatureRequest" xml:space="preserve">
+    <value>Submit feature request</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="SubmitIssue" xml:space="preserve">
+    <value>Submit bug</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Summary</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="Switch" xml:space="preserve">
+    <value>Switch</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="TaglineBy" xml:space="preserve">
+    <value>by</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="TaglineMadeWith" xml:space="preserve">
+    <value>Made with</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="TermsOfService" xml:space="preserve">
+    <value>Thank you for downloading and using our remote control app for your Repetier Server Pro server. Please note that we are not responsable of any demage or failed prints caused by using or misusing our app. We recommend you to never control your printer when you are not in the same room or nearby. This includes, among other things, the control of the printer axis, pausing and resuming prints, remotely control temperatures and so on. It's also commonly recommended to never leave your printer unattended! The use of this app is on your own risk.</value>
+  </data>
+  <data name="Till" xml:space="preserve">
+    <value>till</value>
+  </data>
+  <data name="Timer" xml:space="preserve">
+    <value>Timer</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="TimerActive" xml:space="preserve">
+    <value>Timer is operational</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="TimerInactive" xml:space="preserve">
+    <value>Timer has stopped. In this state, no data can be fetched from your server (temperature, print info...). To fix this, try to restart the timer by touching this message.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="ToggleDemoModus" xml:space="preserve">
+    <value>Toggle demo modus</value>
+  </data>
+  <data name="TypeHereDots" xml:space="preserve">
+    <value>Type here...</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="UpdateAvailableFormatedVersion" xml:space="preserve">
+    <value>An update to '{0}' is available!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="UpdateIntervalSeconds" xml:space="preserve">
+    <value>Update interval (seconds)</value>
+  </data>
+  <data name="UpdateIntervalWhilePrinting" xml:space="preserve">
+    <value>Update interval while printing</value>
+    <comment>v1.1.4</comment>
+  </data>
+  <data name="UseCardViewsForModels" xml:space="preserve">
+    <value>Use card views for models?</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="UseCardViewsForPrinters" xml:space="preserve">
+    <value>Use card views for printers?</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="UseDefaultCredentials" xml:space="preserve">
+    <value>Use default credentials?</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="UsedServices" xml:space="preserve">
+    <value>Used Services</value>
+  </data>
+  <data name="UseHttps" xml:space="preserve">
+    <value>HTTPS?</value>
+    <comment>v1.0.5</comment>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+    <comment>AppBasement</comment>
+  </data>
+  <data name="ViewAndShare" xml:space="preserve">
+    <value>View and share</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="ViewInBrowser" xml:space="preserve">
+    <value>View in browser</value>
+  </data>
+  <data name="ViewPrivacyPolicyInBrowser" xml:space="preserve">
+    <value>Open Privacy Policy</value>
+  </data>
+  <data name="WarningConfigurationIncomplete" xml:space="preserve">
+    <value>Your config is incomplete! Please setup your connection first in your settings!</value>
+  </data>
+  <data name="WarningConfigurationSeemsOkButOffline" xml:space="preserve">
+    <value>Your config seems to be valid, however your server is not reachable!</value>
+  </data>
+  <data name="WarningGcodeScriptsEditing" xml:space="preserve">
+    <value>Please change this settings only if you know what you are doing! The app is not checking any syntax of your code.</value>
+  </data>
+  <data name="WarningHttpsNotAvailable" xml:space="preserve">
+    <value>This app isn't setup to use or allow any encryption. This is why you cannot connect to servers using a SSL certificate. However Repetier Server Pro is reachable at 'http://' by default, so this shouldn't affect you.</value>
+  </data>
+  <data name="WarningMakeSureToBeConnectedToWifi" xml:space="preserve">
+    <value>Please make sure that you are connected to the same network as your print server.</value>
+  </data>
+  <data name="WarningPrinterIsNotConfigured" xml:space="preserve">
+    <value>This seems to be your first visit! Thank you for downloading our remote control app for Repetier Server Pro. To start, please setup your connection to your server below. Alternatively you can start and activate with our demo mode to discover the app first.</value>
+  </data>
+  <data name="WarningPrinterIsOfflineOrMissConfigured" xml:space="preserve">
+    <value>Your print server is not reachable. Please check if you are logged in in your local wifi and your server is running. Otherwise check your settings below.</value>
+  </data>
+  <data name="WarningRevokePermissions" xml:space="preserve">
+    <value>If you want to revoke permissions, please visit your Android app settings.</value>
+    <comment>v1.0.2</comment>
+  </data>
+  <data name="WarningSelectedPrinterIsOfflineDots" xml:space="preserve">
+    <value>The currently selected printer is turned off or not connected to the server...</value>
+    <comment>v1.0.17</comment>
+  </data>
+  <data name="WarningWifiOff" xml:space="preserve">
+    <value>Warning, no Wifi connection found</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="WarningWifiOffMessage" xml:space="preserve">
+    <value>Your device is not connected to a local wifi. In order to get the app working, you need to be connected to same local network as your server.</value>
+    <comment>v1.0.16</comment>
+  </data>
+  <data name="WebActions" xml:space="preserve">
+    <value>Web Actions</value>
+    <comment>v1.0.3</comment>
+  </data>
+  <data name="WebCam" xml:space="preserve">
+    <value>WebCam</value>
+  </data>
+  <data name="WebSocket" xml:space="preserve">
+    <value>WebSocket</value>
+    <comment>v1.0.18</comment>
+  </data>
+  <data name="WebSocketConnected" xml:space="preserve">
+    <value>WebSocket connection established and active.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="WebSocketDisconnected" xml:space="preserve">
+    <value>The connection to the WebSocket is inactive! In this state the app cannot receive any notifications from your server. To fix this, try to reconnect below!</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="YouAreUpToDate" xml:space="preserve">
+    <value>You are up to date!</value>
+    <comment>v1.1.3</comment>
+  </data>
+  <data name="AvailableEntryPoints" xml:space="preserve">
+    <value>Available entry points</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="EnableTabletModeManually" xml:space="preserve">
+    <value>Enable tablet mode manually?</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineEntryPage" xml:space="preserve">
+    <value>Entry Page</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="NoteTabletMode" xml:space="preserve">
+    <value>If the tablet mode is active, an alternative dashboard will be loaded. This dashboard is optimized for tablets and offers a better usability on big screens.</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="SetTabletModeAutomaticallyDependingOnDeviceType" xml:space="preserve">
+    <value>Set tablet mode automatically depending on device type?</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="SettingsTabChangeAppEntryPoint" xml:space="preserve">
+    <value>Change app entry point</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="SettingsTabTabletMode" xml:space="preserve">
+    <value>Tablet Mode</value>
+    <comment>v1.1.6</comment>
+  </data>
+  <data name="HeadlineTabletMode" xml:space="preserve">
+    <value>Tablet Mode</value>
+    <comment>v1.1.6</comment>
+  </data>
+</root>

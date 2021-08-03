@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RemoteControlRepetierServer.Views.DashboardPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels"
+             xmlns:converters="clr-namespace:RemoteControlRepetierServer.Converters"            
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"      
+             xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+             
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:badge ="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"
+             xmlns:vlc="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             
+             x:Name="root"
+             x:DataType="viewModels:DashboardViewModel"         
+             >
+    <ContentPage.Style>
+        <Style TargetType="ContentPage" BasedOn="{StaticResource DefaultPageStyle}">
+            <!-- <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}"/> -->
+            <Style.Triggers>
+                <MultiTrigger TargetType="ContentPage">
+                    <MultiTrigger.Conditions>
+                        <BindingCondition Binding="{Binding IsPortrait}" Value="False"/>
+                        <BindingCondition Binding="{Binding ShowOnlyWebCamInLandscape}" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="BackgroundColor" Value="{DynamicResource Black}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </ContentPage.Style>
+    <!-- --> 
+    <ContentPage.BindingContext>
+        <viewModels:DashboardViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+    </ContentPage.Resources>
+
+    <!-- OPTIMIZED -->
+    <Grid>
+        <!-- Main Content -->
+        <!-- IsVisible="{OnPlatform Android={Binding IsRefreshing, Converter={StaticResource BooleanReverseVisibilityConverter}}}" -->
+
+        <!-- Tablet Mode -->
+        <Grid
+            RowSpacing="0"
+            >
+            <!-- Tabs -->
+            <tabView:SfTabView
+                VisibleHeaderCount="1"
+                DisplayMode="ImageWithText"
+                TabHeaderPosition="Top"
+                SelectedIndex="{Binding TabletTabIndex}"
+                Style="{StaticResource TabViewDefaultStyle}"
+                >
+                <!-- WebCam -->
+                <tabView:SfTabItem 
+                        Title="{x:Static localization:Strings.WebCam}"
+                        IconFont="{StaticResource MaterialDesign_Webcam}"
+                        Style="{StaticResource SmallTabViewItemDefaultStyle}"
+                        >
+                    <tabView:SfTabItem.Content>
+                        <Grid>
+                            <!-- MediaPlayer="{Binding MediaPlayer}" -->
+                            <vlc:MediaPlayerElement 
+                                x:Name="videoViewTablet"
+                                BackgroundColor="{DynamicResource Black}"
+                                EnableRendererDiscovery="True"
+                                >
+                                <vlc:MediaPlayerElement.Style>
+                                    <Style TargetType="vlc:MediaPlayerElement">
+                                        <Setter Property="IsVisible" Value="False"/>
+                                        <Style.Triggers>
+                                            <DataTrigger
+                                                    TargetType="vlc:MediaPlayerElement"
+                                                    Binding="{Binding IsTabletMode}"
+                                                    Value="True">
+                                                <Setter
+                                                    Property="MediaPlayer"
+                                                    Value="{Binding MediaPlayer}"
+                                                    />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </vlc:MediaPlayerElement.Style>
+                                <vlc:MediaPlayerElement.PlaybackControls>
+                                    <vlc:PlaybackControls
+                                        IsAudioTracksSelectionButtonVisible="False"
+                                        IsClosedCaptionsSelectionButtonVisible="False"
+                                        IsAspectRatioButtonVisible="False"
+                                        IsCastButtonVisible="False"
+                                        IsPlayPauseButtonVisible="False"
+                                        IsRewindButtonVisible="False"
+                                        IsSeekButtonVisible="False"
+                                        IsSeekEnabled="False"
+                                        IsSeekBarVisible="False"
+                                        IsStopButtonVisible="False"
+                                        />
+                                </vlc:MediaPlayerElement.PlaybackControls>
+                            </vlc:MediaPlayerElement>
+                        </Grid>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
+            </tabView:SfTabView>
+        </Grid>
+
+        
+        <!-- Overlays -->
+        <busyindicator:SfBusyIndicator 
+            IsBusy="{Binding IsRefreshing}"
+            Style="{StaticResource LoadingBusyIndicatorStyle}"
+            BackgroundColor="{DynamicResource Gray-100}"
+            />
+    </Grid>
+</ContentPage>

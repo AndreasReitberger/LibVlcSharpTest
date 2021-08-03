@@ -1,0 +1,192 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;PRO</DefineConstants>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;PRO</DefineConstants>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\NoInternet.svg" />
+    <None Remove="Resources\Images\DemoRenderImage.png" />
+    <None Remove="Resources\Images\demo_render_image.png" />
+    <None Remove="Resources\Images\Octoprint.png" />
+    <None Remove="Resources\Localization\Flags\de-DE.png" />
+    <None Remove="Resources\Localization\Flags\en-US.png" />
+    <None Remove="RepetierServerSharpApi" />
+    <None Remove="Models\Syncfusion\" />
+    <None Remove="Models\AppCenter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\NoInternet.svg" />
+    <EmbeddedResource Include="Resources\Images\DemoRenderImage.png" />
+    <EmbeddedResource Include="Resources\Images\Octoprint.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LibVLCSharp.Forms" Version="3.5.1" />
+    <PackageReference Include="Plugin.LocalNotification" Version="8.0.2" />
+    <PackageReference Include="Syncfusion.Licensing" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="19.2.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="19.2.0.49" />
+    <PackageReference Include="WebSocket4Net" Version="0.15.2" />
+    <PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\demo_render_image.png" />
+    <Resource Include="Resources\Localization\Flags\de-DE.png" />
+    <Resource Include="Resources\Localization\Flags\en-US.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Localization\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\DefaultTheme.xaml.cs">
+      <DependentUpon>DefaultTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\GlobalTemplates.xaml.cs">
+      <DependentUpon>GlobalTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Themes\DarkTheme.xaml.cs">
+      <DependentUpon>DarkTheme.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AppShell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\BoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\CustomControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Frame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\StackLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBadgeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCharts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfCircularGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfGradientView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfMaskedEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfNumericTextInputs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfNumericUpDowns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfPullToRefresh.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfRangeSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfRotator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfBusyIndicator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfTabView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\Controls\Syncfusion\SfTextInputLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DashboardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoadingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Pages\VersionDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PrivacyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Backup\" />
+  </ItemGroup>
+
+</Project>

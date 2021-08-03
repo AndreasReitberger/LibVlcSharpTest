@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RemoteControlRepetierServer.Views.Pages.VersionDetailPage"
+             
+             xmlns:viewModels="clr-namespace:RemoteControlRepetierServer.ViewModels.Pages"
+             xmlns:converters="clr-namespace:RemoteControlRepetierServer.Converters"
+             xmlns:localization="clr-namespace:LibVlcTest.Resources.Localization"   
+             xmlns:controls="clr-namespace:RemoteControlRepetierServer.Controls"
+             
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"           
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"            
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             
+             Style="{StaticResource DefaultPageStyle}"
+             BackgroundColor="{DynamicResource Gray-100}"
+             x:Name="root"
+             x:DataType="viewModels:VersionDetailPageViewModel"
+             >
+
+    <ContentPage.BindingContext>
+        <viewModels:VersionDetailPageViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <converters:BooleanReverseVisibilityConverter x:Key="BooleanReverseVisibilityConverter" />
+        <converters:DoubleHoursToTimeSpanConverter x:Key="DoubleHoursToTimeSpanConverter" />
+    </ContentPage.Resources>
+
+    <!-- OPTIMIZED -->
+    <Shell.TitleView>
+        <Label 
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Margin="0,0,48,0"
+            Style="{StaticResource TitleViewHeadlineLabelStyle}"
+            Text="{x:Static localization:Strings.HeadlineVersionDetails}"
+            />
+    </Shell.TitleView>
+
+    <!-- OPTIMIZED -->
+    <Grid BackgroundColor="{DynamicResource Gray-White}">
+        <!-- Main content -->
+        <Grid 
+            CompressedLayout.IsHeadless="true"
+            ColumnSpacing="0" 
+            RowSpacing="0"
+            >
+            <Grid.RowDefinitions >
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Content -->
+            <Grid 
+                Margin="10,2,10,16"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Content -->
+                <StackLayout>
+                    <Label 
+                        Text="{x:Static localization:Strings.IntroChangelog}" 
+                        Style="{StaticResource SmallLabelStyle}"
+                        HorizontalTextAlignment="Center"
+                        Margin="4,8"
+                        />
+                    <BoxView Style="{StaticResource SeparatorStyle}" />
+                    <listView:SfListView 
+                        IsScrollBarVisible="False"
+                        Margin="0,0,0,12"
+                        SelectionMode="Single" 
+                        AutoFitMode="DynamicHeight" 
+                        ItemSpacing="2" 
+                        ItemsSource="{Binding Changelogs}"
+                        ItemTemplate="{StaticResource ChangelogItemTemplate}"
+                        IsStickyHeader="True" 
+                        />
+                </StackLayout>
+
+                <!-- Changelog Button -->
+                <StackLayout Grid.Row="1">
+                    <BoxView Style="{StaticResource SeparatorStyle}" />
+                    <button:SfButton
+                        Command="{Binding OpenFullChangelogCommand}"
+                        Text="{x:Static localization:Strings.ViewInBrowser}"
+                        Style="{StaticResource RoundedLongButtonStyle}"
+                        />
+                </StackLayout>
+            </Grid>
+
+
+            <!-- Beta -->
+            <Grid 
+                Grid.Row="1" 
+                >
+                <Grid.Style>
+                    <Style TargetType="Grid" BasedOn="{StaticResource WarningGridStyle}">
+                        <Setter Property="IsVisible" Value="False"/>
+                        <Style.Triggers>
+                            <MultiTrigger TargetType="Grid">
+                                <MultiTrigger.Conditions>
+                                    <BindingCondition Binding="{Binding IsBeta}" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="IsVisible" Value="True"/>
+                            </MultiTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Icon -->
+                <Label  
+                    Text="{StaticResource MaterialDesign_AlertCircleOutline}"
+                    Style="{StaticResource MaterialFontFamilyIconLabelStyle}"
+                    TextColor="{DynamicResource Black}"
+                    Margin="4"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    />
+
+                <Label  
+                    Text="{x:Static localization:Strings.Note_VersionIsBeta}"
+                    Style="{StaticResource WarningLabelStyle}"
+                    Margin="6,12" Grid.Column="1"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start"
+                    />
+            </Grid>
+            
+            <!-- GitHub page -->
+            <controls:TapAnimationGrid
+                Grid.Row="2"
+                Style="{StaticResource DefaultTapAnimationGridStyle}"
+                Command="{Binding ShowProjectOverviewCommand}"
+                BackgroundColor="{DynamicResource Gray-100}"
+                Tapped="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <!--  Edit profile icon  -->
+                <Label
+                    Margin="16,0,0,0"
+                    Style="{StaticResource MaterialSettingsIconLabelStyle}"
+                    Text="{StaticResource MaterialDesign_GitHub}" />
+                <!--  Edit profile label  -->
+                <Label
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource MediumLabelStyle}"
+                    Text="{x:Static localization:Strings.GitHub}" />
+                <!--  Navigation icon  -->
+                <Label
+                    Grid.Column="2"
+                    Style="{StaticResource IconLabelStyle}"
+                    Text="{StaticResource Next}" />
+            </controls:TapAnimationGrid>
+        </Grid>
+
+
+        <!-- IsBusy Overlay -->
+        <busyindicator:SfBusyIndicator 
+            IsBusy="{Binding IsBusy}"
+            Style="{StaticResource LoadingBusyIndicatorStyle}"
+            BackgroundColor="{DynamicResource Gray-100}"
+            />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <!-- https://docs.microsoft.com/en-us/xamarin/android/user-interface/material-theme"-->
+  <style name="Theme.AppCompat.DayNight"
+    parent="Theme.AppCompat.NoActionBar">
+    <item name="android:windowLightStatusBar">false</item>
+  </style>
+</resources>

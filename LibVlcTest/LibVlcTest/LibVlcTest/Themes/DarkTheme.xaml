@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<?xaml-comp compile="true" ?>-->
+<ResourceDictionary
+    x:Class="RemoteControlRepetierServer.Themes.DarkTheme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    
+    xmlns:charts="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+    >
+
+    <ResourceDictionary.MergedDictionaries>
+        <!---->
+        <ResourceDictionary Source="/Themes/Icons.xaml" />
+        <ResourceDictionary Source="/Themes/Fonts.xaml" /> 
+        <!--<ResourceDictionary Source="/Themes/SyncDarkTheme.xaml" />-->
+        <ResourceDictionary Source="/Themes/DefaultTheme.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- https://material.io/design/color/the-color-system.html#tools-for-picking-colors -->
+    <Color x:Key="PrimaryColor">#FE413C</Color>
+    <Color x:Key="PrimaryDarkColor">#B72316</Color>
+    <Color x:Key="PrimaryDarkenColor">#ab3641</Color>
+    <Color x:Key="PrimaryLighterColor">#edcacd</Color>
+    <Color x:Key="PrimaryLight">#ffe8f4</Color>
+    <Color x:Key="SecondaryGradient">#7644ad</Color>
+    <Color x:Key="Secondary">#41E0EC</Color>
+
+    <Color x:Key="PrimaryGradient">#B72316</Color>
+    <Color x:Key="GradientStart">#93291e</Color>
+    <Color x:Key="GradientEnd">#DD4E38</Color>
+    
+    <!-- https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129-->
+    <!-- Gray -->
+    <Color x:Key="Gray-100">#212121</Color>
+    <Color x:Key="Gray-200">#424242</Color>
+    <Color x:Key="Gray-300">#616161</Color>
+    <Color x:Key="Gray-400">#757575</Color>
+    <Color x:Key="Gray-500">#9E9E9E</Color>
+    <Color x:Key="Gray-600">#BDBDBD</Color>
+    <Color x:Key="Gray-700">#E0E0E0</Color>
+    <Color x:Key="Gray-800">#EEEEEE</Color>
+    <Color x:Key="Gray-900">#F5F5F5</Color>
+    <Color x:Key="Gray-Black">#ffffff</Color>
+    <Color x:Key="Gray-White">#121212</Color>
+    
+    
+    <!-- BlueGray
+    <Color x:Key="Gray-100">#263238</Color>
+    <Color x:Key="Gray-200">#37474F</Color>
+    <Color x:Key="Gray-300">#455A64</Color>
+    <Color x:Key="Gray-400">#546E7A</Color>
+    <Color x:Key="Gray-500">#607D8B</Color>
+    <Color x:Key="Gray-600">#78909C</Color>
+    <Color x:Key="Gray-700">#90A4AE</Color>
+    <Color x:Key="Gray-800">#B0BEC5</Color>
+    <Color x:Key="Gray-900">#CFD8DC</Color>
+    <Color x:Key="Gray-Black">#ffffff</Color>
+    <Color x:Key="Gray-White">#121212</Color>
+    -->
+    
+    <Color x:Key="Error">#CF6679</Color>
+    <Color x:Key="OnError">#121212</Color>
+    <Color x:Key="OnPrimary">#121212</Color>
+    <Color x:Key="OnSecondary">#121212</Color>
+    <Color x:Key="OnBackground">#ffffff</Color>
+    <Color x:Key="OnSurface">#ffffff</Color>
+
+    <Color x:Key="ItemTemplateOuterBackground">#1C2939</Color>
+    <Color x:Key="ItemTemplateInnerBackground">White</Color>
+    <Color x:Key="ItemTemplateSelectedBackground">#3C8CF1</Color>
+    <Color x:Key="ItemTemplateBorder">Transparent</Color>
+    <Color x:Key="ItemTemplatePrimaryText">Black</Color>
+    <Color x:Key="ItemTemplateSecondaryText">Gray</Color>
+    <Color x:Key="ItemTemplatePrimary">#f37921</Color>
+    <Color x:Key="ItemTemplateSecondary">White</Color>
+    <Color x:Key="ItemTemplateSeparator">LightGray</Color>
+
+    <Color x:Key="GroupingTemplateBackground">#E4E4E4</Color>
+    <Color x:Key="GroupingTemplatePrimary">#1c1c1c</Color>
+
+    <Color x:Key="MenuItemBarBackground">#1A202C</Color>
+    <Color x:Key="TaptemGridBackground">#1A202C</Color>
+    <Color x:Key="PanelBackground">#1A202C</Color>
+
+    <x:String x:Key="SfTextInputLayoutTheme">CustomTheme</x:String>
+    <Color x:Key="SfTextInputLayoutFloatedHintUnfocusedColor">#D0D4DA</Color>
+    <Color x:Key="SfTextInputLayoutHelperTextColor">#D0D4DA</Color>
+    <Color x:Key="SfTextInputLayoutCounterLabelColor">#D0D4DA</Color>
+
+    <!--  Chart colors  -->
+    <charts:ChartColorCollection x:Key="ChartColors">
+        <Color>#31E5E3</Color>
+        <Color>#3BBFBD</Color>
+        <Color>#3DA4A2</Color>
+        <Color>#438483</Color>
+        <Color>#3D6463</Color>
+        <Color>#2F4949</Color>
+    </charts:ChartColorCollection>
+</ResourceDictionary>
